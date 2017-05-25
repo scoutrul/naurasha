@@ -1,0 +1,224 @@
+/* FONTS */
+
+@font-face {
+    font-family: "Schlange_slab_bld";
+    src: url(./fonts/Schlange_slab_bld.otf);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed');
+
+/*
+*/
+
+
+/* SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+header,
+section,
+footer {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 100%;
+    max-width: 1025px;
+    min-width: 460px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+h1,h2,h3 {
+    font-family: "Schlange_slab_bld", sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+*/
+
+
+/* Sticky Header */
+
+body {
+    margin-top: 50px;
+}
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    background: #FFF;
+    box-shadow: 0 0px 5px 2px #c1c1c1;
+}
+
+.header .container {
+    height: 50px;
+}
+
+.header .logo {
+    width: 5em;
+}
+
+.header .phone {}
+
+.header .order {
+    margin: auto 0 0 auto;
+}
+
+
+/*
+*/
+
+section:nth-child(odd) {
+    background-color: #c2d4d8;
+}
+
+section:nth-child(even) {
+    background-color: #dbe9d8;
+}
+
+
+/* Main sections */
+
+.mainoffer .container {}
+
+.mainoffer .left {
+    min-width: 35%;
+}
+
+.mainoffer .right {}
+
+
+/*
+*/
+
+.aboutit .container {
+    flex-direction: column;
+    text-align: center;
+}
+
+.aboutit .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aboutit .list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 220px;
+    min-width: 25%;
+}
+
+.aboutit .list img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    margin: 10px;
+}
+
+.aboutit .list .bold {
+    font-weight: bold;
+}
+
+
+/*
+*/
+
+.howitworks .left,
+.howitworks .right {
+    flex: 1 0 50%;
+}
+
+.howitworks .left .list,
+.howitworks .right .list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.howitworks .left .list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.howitworks .left .list img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    margin: 10px;
+}
+
+.howitworks .right .list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.howitworks .right .list li {
+    flex: 1 0 50%;
+    min-width: 150px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.howitworks .right .list img {
+    width: 200px;
+    height: 140px;
+    border: 1px solid #000;
+    margin: 1em;
+}
+
+
+/*
+*/
+
+.whatinside .container {
+	flex-direction: column;
+}
+
+
+section.systemreq {}
+
+section.reviews {}
+
+section.order {}
+
+footer.contacts {}
