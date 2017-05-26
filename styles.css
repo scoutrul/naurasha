@@ -5,7 +5,6 @@
     src: url(./fonts/Schlange_slab_bld.otf);
 }
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed');
 
 /*
 */
@@ -29,7 +28,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 150%;
+    color: #3C1231;
 }
 
 header,
@@ -69,13 +70,18 @@ section {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
+    color: #3c3431;
+    line-height: 120%;
+    word-break: break-word;
     font-family: "Schlange_slab_bld", sans-serif;
 }
 
 h1 {
     font-size: 3em;
     text-align: center;
+    margin-top: 0;
 }
 
 h2 {
@@ -84,6 +90,10 @@ h2 {
 
 h3 {
     font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.1em;
 }
 
 form {
@@ -103,6 +113,7 @@ body {
 }
 
 .header.sticky {
+    z-index: 10;
     position: fixed;
     top: 0;
     background: #FFF;
@@ -149,18 +160,16 @@ body {
 /* Main sections */
 
 .mainoffer {
-background-image: url(images/startbg.jpg);
-    background-size: 100%;
+    background-image: url(images/bg_0.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 640px;
-    max-height: 40vh;
     align-items: center;
-    padding: 0;
+    color: #FFF;
 }
 
 .mainoffer .container {
-    margin: 10vh 0 0;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -168,14 +177,11 @@ background-image: url(images/startbg.jpg);
 .mainoffer .left {
     max-width: 45%;
     min-width: 360px;
-    display: flex;
-    flex: 1 1 auto;
 }
 
 .mainoffer .left img,
 .mainoffer .right img {
     width: 100%;
-    height: 100%;
 }
 
 .mainoffer .right {
@@ -185,13 +191,72 @@ background-image: url(images/startbg.jpg);
     align-items: center;
 }
 
+.mainoffer .text {
+    margin: 2em auto;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.mainoffer .buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.mainoffer .buttons .button {
+    border-radius: 2em;
+    border: 1px solid rgba(43, 89, 50, 0.78);
+    cursor: pointer;
+    line-height: 200%;
+    display: flex;
+    align-items: stretch;
+    padding: 1em;
+}
+
+.mainoffer .buttons .title {
+    padding: 0 5px;
+    float: left;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mainoffer .buttons .price {
+    padding: 0 5px;
+    font-weight: 800;
+    text-shadow: 1px 1px rgb(4, 64, 82);
+    text-transform: uppercase;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.mainoffer button.order {
+    margin-right: 1em;
+    background: -webkit-linear-gradient(top, rgb(12, 201, 237) 0%, rgb(23, 112, 145) 100%);
+}
+
+.mainoffer button.order:hover {
+    background: -webkit-linear-gradient(top, rgb(52, 209, 239) 0%, rgb(7, 104, 140) 100%);
+}
+
+.mainoffer button.demo {
+    margin-right: 1em;
+    background: -webkit-linear-gradient(top, rgb(237, 12, 12) 0%, rgb(145, 46, 23) 100%);
+}
+
+.mainoffer button.demo:hover {
+    background: -webkit-linear-gradient(top, rgb(255, 68, 68) 0%, rgb(160, 34, 4) 100%);
+}
+
 
 /*
 */
 
-.aboutit {
-	padding-top: 0;
-}
+.aboutit {}
+
 .aboutit .container {
     text-align: center;
 }
@@ -213,14 +278,13 @@ background-image: url(images/startbg.jpg);
     min-width: 25%;
     max-width: 75%;
     margin: 0 auto;
+    padding: 20px;
 }
 
-.aboutit .list img {
-    margin: 10px;
-}
+.aboutit .list img {}
 
-.aboutit .list .bold {
-    font-weight: bold;
+.aboutit .list .text {
+    font-size: 90%;
 }
 
 
@@ -233,9 +297,18 @@ background-image: url(images/startbg.jpg);
     background-image: url(images/bg_1.jpg);
     background-size: cover;
     background-attachment: fixed;
+    text-shadow: 5px 5px 10px #000;
 }
 
-.howitworks .container {}
+.howitworks h1 {
+    color: #FF0;
+}
+
+.howitworks .text {
+    padding: 10px 20px;
+    border: 0 solid #bed6be;
+    border-left-width: 1px;
+}
 
 .howitworks .left {
     flex: 1 1 40%;
@@ -275,7 +348,7 @@ background-image: url(images/startbg.jpg);
     flex-wrap: wrap;
     height: 100%;
     justify-content: center;
-    align-content: center;
+    align-content: space-around;
 }
 
 .howitworks .right .list li {
@@ -290,6 +363,16 @@ background-image: url(images/startbg.jpg);
     height: 100%;
     border: 1px solid #000;
     margin: 1em;
+    box-shadow: 1px 1px 30px #000;
+}
+
+.howitworks #locations li:hover {
+    cursor: pointer;
+}
+
+.howitworks #locations li:hover img {
+    transform: scale(1.3);
+    transition: .1s ease
 }
 
 
@@ -300,12 +383,38 @@ background-image: url(images/startbg.jpg);
     width: 100%;
 }
 
-.whatinside .container .left {
-    flex: 1 1 55%;
+.whatinside .content {
+    display: flex;
 }
 
-.whatinside .container .right {
-    flex: 1 1 45%;
+.whatinside .content .left {
+    flex: 1 1 65%;
+}
+
+.whatinside .content .right {
+    flex: 1 1 35%;
+    display: flex;
+}
+
+.whatinside .content .right .list {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 640px;
+}
+
+.whatinside .content .right .list li {
+    margin: 10px 0px
+}
+
+.whatinside .lSSlideOuter {
+    max-width: 640px;
+    margin: auto;
+}
+
+.whatinside .lSSlideWrapper {
+    max-width: 90vw;
 }
 
 
@@ -313,32 +422,47 @@ background-image: url(images/startbg.jpg);
 */
 
 .systemreq {
-    background-image: url(images/sys_req_bg.jpg);
-    background-size: 940px;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    min-height: 540px;
-    color: #FFF;
-    font-size: 80%;
+    background-image: url(images/bg_2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 670px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.systemreq h1 {
+    color: #fdfefd;
+    margin-top: -50px;
+    margin-bottom: 90px;
 }
 
 .systemreq .container {
     align-items: center;
-    align-self: center;
+    text-shadow: 10px 5px 10px #000;
+    background-image: url(images/naurasha_screen.png);
+    background-size: 1020px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 670px;
+    color: #FFF;
+    position: absolute;
+    top: 140px;
 }
 
 .systemreq .list {
     width: 280px;
-    margin: auto;
+    padding: 0;
+    margin: 90px auto auto;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    min-height: 100%;
-    text-shadow: 10px 5px 10px #000;
+}
+
+.systemreq .list span {
+    text-decoration: underline;
 }
 
 .systemreq .list li {
-    margin: 6px 0;
+    margin: 3px 0;
 }
 
 

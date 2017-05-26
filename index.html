@@ -6,6 +6,11 @@
     <title>Наураша в стране Наурандии</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lightgallery/1.3.9/js/lightgallery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css">
+    <script src="https://cdn.jsdelivr.net/jquery.lightslider/1.1.1/js/jquery.lightslider.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.lightslider/1.1.1/css/jquery.lightslider.min.css">
 </head>
 
 <body>
@@ -29,37 +34,46 @@
                     <img src="images/logo_naurasha.png" alt="Наураша в стране Наурандии">
                 </div>
                 <div class="text">
-                    Почему мороженое холодное? Как остывает чай? Зачем врачи меряют температуру? Не знаете, как ответить ребенку на все эти вопросы? Наша лаборатория в игровой форме поможет разъяснить сложные физические и природные явления.
+                    Почему мороженое холодное? Как остывает чай? Зачем врачи измеряют температуру? Не знаете, как ответить ребенку на все эти вопросы? Наша лаборатория в игровой форме поможет разъяснить сложные физические и природные явления.
                 </div>
                 <div class="buttons">
-                    <button>Бесплатная демо-версия</button>
-                    <button>Заказать лаборатория</button>
+                    <button class="button order">
+                        <div class="title">Заказать лабораторию</div>
+                        <div class="price">
+                            <div>5,999р</div>
+                    	</div>
+                    </button>
+                    <button class="button demo">
+                        <div class="title">Демо-версия</div>
+                        <div class="price">
+                            <div>0р</div>
+                    	</div>
+                    </button>
                 </div>
             </div>
-        </div>
     </section>
     <section class="aboutit">
         <div class="container">
-            <h1>Что такое детская лаборатория "Наураша в стране Наурандии"</h1>
+            <h1>"Наураша в стране Наурандии" - это: </h1>
             <ul class="list flexrow">
                 <li>
-                    <img src="images/about_4.png" alt="Научные эксперименты с настоящим датчиком у вас дома">
-                    <div class="bold">Научные эксперименты с настоящим датчиком у вас дома</div>
+                    <img src="images/icons/about_4.png" alt="Научные эксперименты с настоящим датчиком у вас дома">
+                    <h4>Научные эксперименты с настоящими датчиками </h4>
                     <div class="text">4 темы для изучения, более 50 опытов + свободный режим, который дает бесконечные возможности для экспериментирования</div>
                 </li>
                 <li>
-                    <img src="images/about_2.png" alt="Новый формат изучения окружающего мира">
-                    <div class="bold">Новый формат изучения окружающего мира</div>
+                    <img src="images/icons/about_2.png" alt="Новый формат изучения окружающего мира">
+                    <h4>Новый формат изучения окружающего мира</h4>
                     <div class="text">Ребёнок проводит эксперименты не в виртуальном пространстве, а руками, на рабочем столе, в режиме реального времени</div>
                 </li>
                 <li>
-                    <img src="images/about_3.png" alt="Воспитание любознательности у ребенка">
-                    <div class="bold">Воспитание любознательности у ребенка</div>
+                    <img src="images/icons/about_3.png" alt="Воспитание любознательности у ребенка">
+                    <h4>Воспитание любознательности у ребенка</h4>
                     <div class="text">Изучение сути физических явлений уже в 5-8 лет – намного раньше, чем это предполагается в школьной программе</div>
                 </li>
                 <li>
-                    <img src="images/about_1.png" alt="Первая в мире цифровая лаборатория для детей от 5 лет">
-                    <div class="bold">Первая в мире цифровая лаборатория для детей от 5 лет</div>
+                    <img src="images/icons/about_1.png" alt="Первая в мире цифровая лаборатория для детей от 5 лет">
+                    <h4>Первая в мире цифровая лаборатория для детей от 5 лет</h4>
                     <div class="text">Отечественная разработка, получившая признание на международных выставках. Создана профессиональной командой с привлечением детских психологов и методистов</div>
                 </li>
             </ul>
@@ -67,23 +81,23 @@
     </section>
     <section class="howitworks">
         <div class="container flexrow flexwrap">
-            <h1>4 лаборатории, каждая из которых посвящена отдельной теме:</h1>
+            <h1>Изучение четырёх физических явлений, для каждого из которых создана отдельная лаборатория!</h1>
             <div class="left">
                 <ul class="list">
                     <li>
-                        <img src="images/lab_light.png" alt="Свет">
+                        <img src="images/icons/lab_light.png" alt="Свет">
                         <div>Свет</div>
                     </li>
                     <li>
-                        <img src="images/lab_electro.png" alt="Электричество">
+                        <img src="images/icons/lab_electro.png" alt="Электричество">
                         <div>Электричество</div>
                     </li>
                     <li>
-                        <img src="images/lab_sound.png" alt="Звук">
+                        <img src="images/icons/lab_sound.png" alt="Звук">
                         <div>Звук</div>
                     </li>
                     <li>
-                        <img src="images/lab_tempo.png" alt="Температура">
+                        <img src="images/icons/lab_tempo.png" alt="Температура">
                         <div>Температура</div>
                     </li>
                 </ul>
@@ -92,56 +106,90 @@
                 </div>
             </div>
             <div class="right">
-                <ul class="list">
-                    <li>
-                        <img src="images/game_light_thumb.jpg" alt="Лаборатория Наураша Свет">
+                <ul id="locations" class="list">
+                    <li data-src="images/locations/game_light.jpg">
+                        <img src="images/locations/game_light_thumb.jpg" alt="Лаборатория Наураша Свет">
                     </li>
-                    <li>
-                        <img src="images/game_electro_thumb.jpg" alt="Лаборатория Наураша Электричество">
+                    <li data-src="images/locations/game_electro.jpg">
+                        <img src="images/locations/game_electro_thumb.jpg" alt="Лаборатория Наураша Электричество">
                     </li>
-                    <li>
-                        <img src="images/game_sound_thumb.jpg" alt="Лаборатория Наураша Звук">
+                    <li data-src="images/locations/game_sound.jpg">
+                        <img src="images/locations/game_sound_thumb.jpg" alt="Лаборатория Наураша Звук">
                     </li>
-                    <li>
-                        <img src="images/game_tempo_thumb.jpg" alt="Лаборатория Наураша Температура">
+                    <li data-src="images/locations/game_tempo.jpg">
+                        <img src="images/locations/game_tempo_thumb.jpg" alt="Лаборатория Наураша Температура">
                     </li>
-                    <li>
-                        <img src="images/game_lime_thumb.jpg" alt="Кислоты Наураша Температура">
+                    <li data-src="images/locations/game_lime.jpg">
+                        <img src="images/locations/game_lime_thumb.jpg" alt="Кислоты Наураша Температура">
                     </li>
-                    <li>
-                        <img src="images/game_magnet_thumb.jpg" alt="Магнитизм Наураша Температура">
+                    <li data-src="images/locations/game_magnet.jpg">
+                        <img src="images/locations/game_magnet_thumb.jpg" alt="Магнитизм Наураша Температура">
                     </li>
                 </ul>
+                <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#locations").lightGallery({
+                        download: false
+                    });
+                });
+                </script>
             </div>
         </div>
     </section>
     <section class="whatinside">
-        <div class="container flexrow flexwrap">
+        <div class="container">
             <h1>Что вы найдете в коробке</h1>
-            <div class="left">
-                photo
-            </div>
-            <div class="right">
-                <ul class="list">
-                    <li>Программное обеспечение</li>
-                    <li>Датчик в виде Божьей Коровки. Наш датчик особенный: он содержит целых четыре сенсора и может измерять температуру, напряжение, громкость звука и освещённость.</li>
-                    <li>Различные предметы для проведения экспериментов.</li>
-                    <li>Руководство по технике безопасности</li>
-                    <li>Много часов увлекательных игр вашего ребёнка </li>
-                </ul>
+            <div class="content flexwrap">
+                <div class="left">
+                    <ul id="lightSlider">
+                        <li>
+                            <img src="images/photos/photo_1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/photos/photo_2.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/photos/photo_3.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/photos/photo_4.jpg" alt="">
+                        </li>
+                    </ul>
+                    <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('#lightSlider').lightSlider({
+                            item: 1,
+                            cssEasing: 'ease-in-out',
+                            loop: true,
+                            auto: true,
+                            pager: false
+                        });
+                    });
+                    </script>
+                </div>
+                <div class="right">
+                    <ul class="list">
+                        <li>Программное обеспечение</li>
+                        <li>Датчик в виде Божьей Коровки. Наш датчик особенный: он содержит целых четыре сенсора и может измерять температуру, напряжение, громкость звука и освещённость.</li>
+                        <li>Различные предметы для проведения экспериментов.</li>
+                        <li>Руководство по технике безопасности</li>
+                        <li>Много часов увлекательных игр вашего ребёнка </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
+    <img src="images/separator.png" style="opacity: .8; max-width: 100%">
     <section class="systemreq">
         <div class="container">
-            <h2>Системные требования:</h2>
+            <h1>Системные требования:</h1>
             <ul class="list">
-                <li>Система: Windows 8;</li>
-                <li>Процессор: Intel Core i3 3ГГц;</li>
-                <li>Память: 4096 Мб;</li>
-                <li>Видео-карта: с ОЗУ 512 Мб, разрешение экрана 1920*1080;</li>
-                <li>Аудио-карта: совместимая с DirectX;</li>
-                <li>Жесткий диск: 2 Гб свободного места;</li>
+                <li><span>Система:</span> Windows 8;</li>
+                <li><span>Процессор:</span> Intel Core i3 3ГГц;</li>
+                <li><span>Память:</span> 4096 Мб;</li>
+                <li><span>Видео-карта:</span> с ОЗУ 512 Мб, разрешение экрана 1920*1080;</li>
+                <li><span>Аудио-карта:</span> совместимая с DirectX;</li>
+                <li><span>Жесткий диск:</span> 2 Гб свободного места;</li>
                 <li>DirectX 9.0c, Net Framework 3.5</li>
             </ul>
         </div>
