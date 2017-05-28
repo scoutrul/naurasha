@@ -19,18 +19,29 @@
         <!--seporator-->
     </header>
     <header class="header sticky">
-        <div class="container">
+        <div class="container flexrow">
             <div class="logo"><img src="images/logo_naura.png" alt="ООО Научные Развлечения"></div>
             <div class="phone">
                 <span class="number">8(495) 766-24-23</span>
                 <span class="hot">горячая линия "Наураша"</span>
             </div>
-            <div class="order">
-                <button>заказ</button>
+            <div class="buttons">
+                <button class="button hat">
+                    <div class="title" id="header-order-button">Заказать</div>
+                </button>
             </div>
+            <script type="text/javascript">
+            $(document).ready(function() {
+                $("#header-order-button").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#order-form").offset().top
+                    }, 1400);
+                });
+            })
+            </script>
         </div>
     </header>
-    <section class="mainoffer">
+    <section class="mainoffer mainoffer-bg box-bg">
         <div class="container flexrow">
             <div class="left"><img src="images/hello_naurasha.png" alt="Детская цифровая лаборатория Наураша"></div>
             <div class="right">
@@ -84,26 +95,26 @@
             </ul>
         </div>
     </section>
-    <section class="howitworks">
+    <section class="howitworks howitworks-bg box-bg">
         <div class="container flexrow flexwrap">
             <h1>Изучение четырёх физических явлений, для каждого из которых создана отдельная лаборатория!</h1>
             <div class="left">
                 <ul class="list">
                     <li>
                         <img src="images/icons/lab_light.png" alt="Свет">
-                        <div>Свет</div>
+                        <h4>Свет</h4>
                     </li>
                     <li>
                         <img src="images/icons/lab_electro.png" alt="Электричество">
-                        <div>Электричество</div>
+                        <h4>Электричество</h4>
                     </li>
                     <li>
                         <img src="images/icons/lab_sound.png" alt="Звук">
-                        <div>Звук</div>
+                        <h4>Звук</h4>
                     </li>
                     <li>
                         <img src="images/icons/lab_tempo.png" alt="Температура">
-                        <div>Температура</div>
+                        <h4>Температура</h4>
                     </li>
                 </ul>
                 <div class="text">
@@ -167,7 +178,7 @@
                             item: 1,
                             cssEasing: 'ease-in-out',
                             loop: true,
-                            auto: true,
+                            auto: false,
                             pager: false
                         });
                     });
@@ -197,7 +208,7 @@
             </div>
         </div>
     </section>
-    <section class="systemreq">
+    <section class="systemreq systemreq-bg box-bg">
         <div class="container">
             <h1>Системные требования:</h1>
             <ul class="list">
@@ -314,9 +325,9 @@
             </script>
         </div>
     </section>
-    <section class="order-section">
+    <section class="order-section order-bg box-bg">
         <div class="container">
-            <h1>До 5 июня <span>-1000 рублей</span></h1>
+            <h1>До 5 июня <span>скидка 1000 рублей</span> !</h1>
             <div class="countdown">
                 <script>
                 countDown1 = new CountDownObject();
@@ -349,17 +360,19 @@
                 </div>
             </div>
             <div class="right">
-                <h2>Заказать лабораторию "Наураша в стране Наурандии"</h2>
+                <h2><span>Заказать лабораторию</span> "Наураша в стране Наурандии" <span>со скидкой!</span>
+                </h2>
                 <form action="">
                     <input type="text" placeholder="Имя">
                     <input type="text" placeholder="Email">
                     <input type="text" placeholder="Телефон">
                     <textarea name="" id="" cols="30" rows="2" placeholder="Примечание"></textarea>
+                    <sup>*Наш менеджер скоро свяжется с Вами!</sup>
                     <div class="buttons">
                         <button class="button demo">
-                            <div class="title">Заказать лабораторию</div>
+                            <div class="title">Заказать</div>
                             <div class="price">
-                                <div class="stroke">6,999</div>
+                                <div><strike>6,999р</strike></div>
                                 <div>5,999р</div>
                             </div>
                         </button>
@@ -368,63 +381,31 @@
             </div>
         </div>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts-bg">
         <div class="container flexrow flexwrap">
             <div class="left">
-                <form action="">
+                <form action="" id="order-form">
                     <input type="text" placeholder="E-mail">
-                    <textarea name="" id="" cols="30" rows="2" placeholder="Вопрос"></textarea>
-                    <button>Отправить</button>
+                    <textarea name="" id="" cols="30" rows="2" placeholder="Ваш вопрос"></textarea>
+                    <a href="#">Отправить</a>
                 </form>
             </div>
             <div class="right">
-                <h2>Контакты</h2>
                 <ul class="list social">
-                    <li>Youtube</li>
-                    <li>FB</li>
-                    <li>VK</li>
-                    <li>IN</li>
-                    <li>ODNKSKI</li>
+                    <li><img src="images/icons/soc_yt.png" alt=""></li>
+                    <li><img src="images/icons/soc_fb.png" alt=""></li>
+                    <li><img src="images/icons/soc_vk.png" alt=""></li>
+                    <li><img src="images/icons/soc_in.png" alt=""></li>
+
                 </ul>
-                <ul class="list contacts">
+                <ul class="list contact">
                     <li>Телефон: 8(495) 766-24-23</li>
                     <li>Email: naurasha@naurasha.ru</li>
+                    <li>Copyright 2017</li>
                 </ul>
-                <div>Copyright 2017</div>
             </div>
         </div>
     </section>
 </body>
 
 </html>
-<!-- 
-				Этапы
-
-1. Подготовка проекта - ЗАВЕРШЕНО
-	- html init
-	- гит
-	- IDE + autoupdate
-	- макет на бумаге
-
-2. Первичная верстка контейнеров - ЗАВЕРШЕНО
-	- html => sections
-	- css => w/h, fonts, padding, margin
-	===> адаптивно
-
-3. Более точная верстка каждого блока
-	==> картинки, беки
-	- Шапка => sticky header + order button
-	- Заглавный => text + order and demo buttons
-	- Что такое Наураша?
-	- Как работает? => фото в модальных окнах
-	- Что в коробке? => Слайдер
-	- Системные требования
-	- Отзывы => слайдер
-	- Заявка => счетчик, форма заказа
-	- Футер Контакты => фидбек 
-
-4. Динамичные элементы и анимационные эффекты
-
-5. Тестирование, размещение.
-
--->

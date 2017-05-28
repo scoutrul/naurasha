@@ -16,12 +16,6 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 470px) {
-    * {
-        word-break: break-all;
-    }
-}
-
 body,
 html {
     padding: 0;
@@ -49,20 +43,35 @@ section {
     -webkit-flex-grow: 1;
     justify-content: center;
     flex-direction: column;
-    position: relative;
 }
 
 section {
     padding: 5em 0;
 }
 
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    max-width: 1025px;
+    padding: 10px;
+    margin: auto;
+    z-index: 5;
+}
 
 .buttons {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 20px;
     flex-wrap: wrap;
+}
+
+.header .buttons {
+    margin: auto;
+    width: auto;
+    justify-content: flex-end;
 }
 
 .buttons .button {
@@ -75,7 +84,7 @@ section {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    margin: 1em auto;
+    margin-bottom: 1em;
 }
 
 .buttons .title {
@@ -140,19 +149,6 @@ button:hover {
     max-width: 70%
 }
 
-.container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    min-height: 100%;
-    height: 100%;
-    max-width: 1025px;
-    padding: 10px;
-    margin: auto;
-    z-index: 1;
-}
-
 .flexrow {
     flex-direction: row;
 }
@@ -200,37 +196,43 @@ form {
 
 .header {
     display: flex;
-    min-height: 5em;
+    min-height: 60px;
 }
 
 .header.sticky {
     z-index: 10;
     position: fixed;
     top: 0;
-    background: #FFF;
-    box-shadow: 0 0px 5px 2px #c1c1c1;
+    background-color: rgba(234, 234, 234, 0.5);
+}
+
+.header.sticky:hover {
+    background-color: rgba(234, 234, 234, 1);
 }
 
 .header .container {
-    display: table;
+    display: flex;
     padding: 0;
     margin: auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header .logo,
+.header .logo {
+    margin-right: 1em;
+}
+
 .header .logo img {
-    display: table-cell;
-    vertical-align: middle;
+    height: 40px;
 }
 
 .header .phone {
-    display: table-cell;
-    vertical-align: middle;
+    flex: 1 1 auto;
 }
 
 .header .phone .number {
     font-family: "Schlange_slab_bld", sans-serif;
-    font-size: 2em;
+    font-size: 1.7em;
     display: block;
 }
 
@@ -239,9 +241,16 @@ form {
     font-size: 80%;
 }
 
-.header .order {
-    display: table-cell;
-    vertical-align: middle;
+.header button.hat {
+    opacity: .6;
+    margin: auto !important;
+    box-shadow: none !important;
+    line-height: 50%;
+    background: -webkit-linear-gradient(top, rgb(224, 224, 224) 0%, rgb(140, 140, 140) 100%);
+}
+
+.header button.hat:hover {
+    opacity: .9;
 }
 
 
@@ -252,10 +261,6 @@ form {
 /* Main sections */
 
 .mainoffer {
-    background-image: url(images/bg_0.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     min-height: 640px;
     align-items: center;
     color: #FFF;
@@ -333,11 +338,7 @@ form {
 */
 
 .howitworks {
-    background-color: #2f7f42;
     color: #FFF;
-    background-image: url(images/bg_1.jpg);
-    background-size: cover;
-    background-attachment: fixed;
     text-shadow: 5px 5px 10px #000;
 }
 
@@ -380,8 +381,14 @@ form {
     font-size: 2em;
 }
 
+.howitworks .left h4 {
+    color: #FFF;
+    flex: 1 1 auto;
+}
+
 .howitworks .left .list img {
     margin: 10px;
+    flex: 0 0 auto;
 }
 
 .howitworks .right .list {
@@ -494,10 +501,6 @@ form {
 */
 
 .systemreq {
-    background-color: #568841;
-    background-image: url(images/bg_2.jpg);
-    background-size: cover;
-    background-attachment: fixed;
     max-height: 540px;
     position: relative;
     margin-bottom: 130px;
@@ -545,10 +548,13 @@ form {
 /*
 */
 
+.reviews {
+    box-shadow: 4px 6px 8px rgba(31, 31, 31, 0.72);
+    z-index: 2;
+}
+
 .reviews .lSSlideOuter {
-    /* max-width: calc(100% - 100px); */
     width: 100%;
-    /* max-width: 1000px; */
     margin: auto;
 }
 
@@ -581,27 +587,17 @@ form {
 */
 
 .order-section {
-    background-image: url('images/bgpattern_2.png');
-    background-attachment: fixed;
     text-shadow: 10px 5px 10px #000;
 }
 
 .order-section h1 {
-    color: #fdfefd;
+    color: #fff236;
 }
 
 .order-section h1 span {
-    color: #fff236;
+    color: #ff2d29;
     font-weight: bolder;
     font-family: 'Open Sans', sans-serif;
-}
-
-section.order-section:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgba(58, 147, 210, 0.83);
 }
 
 .order-section .left {
@@ -623,6 +619,7 @@ section.order-section:after {
 }
 
 .order-section .img img {
+    max-width: 100%;
     width: 100%;
     height: 100%
 }
@@ -644,20 +641,34 @@ section.order-section:after {
     color: #fff236;
 }
 
-.order-section .right form {
+.order-section h2 span {
+    color: #FFF;
+    font-weight: bolder;
+}
+
+.order-section sup {
+    font-size: 70%;
+    display: block;
+    text-align: right;
+    padding: 0 2em;
+    color: #FFF;
+}
+
+.order-section form {
     display: flex;
     flex-direction: column;
 }
 
-.order-section .right form input,
-.order-section .right form textarea {
+.order-section form input,
+.order-section form textarea {
     margin: 1em 0;
     line-height: 3em;
     padding: 1em 2em;
     border-radius: 2em;
+    width: 100%;
 }
 
-.order-section .right form button {
+.order-section form button {
     flex-wrap: wrap;
     line-height: 1.5em;
     margin: 1em 0 !important;
@@ -669,32 +680,124 @@ section.order-section:after {
     text-transform: uppercase;
     background: -webkit-linear-gradient(top, rgb(237, 12, 12) 0%, rgb(232, 80, 45) 100%);
     border: 0;
+    width: 100%;
 }
 
-.order-section .right form button .title {
-    flex: 1 0 60%;
-        min-width: 220px;
+.order-section form button .title {
+    flex: 1 1 50%;
+    line-height: 50px;
 }
 
-.order-section .right form button .price {
+.order-section form button .price {
     padding: 0 1em;
     flex: 1 0 30%;
+    font-size: 150%
 }
 
-.order-section .price .stroke {
-	font-style: italic;
-	position: relative;
-	font-size: 80%
+.order-section form button strike {
+    font-style: italic;
+    font-size: 70%
 }
-.order-section .price .stroke:after {
-	content: '_____';
-	position: absolute;
-	left: 0;
-	top: -10px;
-}
+
+
 /*
 */
 
 .contacts {
+    padding: 1em 0 0;
+    font-size: 80%;
+    font-weight: 300;
+}
+
+
+
+.contacts form {
+    flex: 1 1 auto;
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.contacts form input {
+    flex: 0 1 auto;
+    margin: 2px 0;
+    padding: 0 5px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 12px;
+    width: 100%;
+    background-color: #f1efef;
+}
+
+.contacts form textarea {
+    flex: 1 1 auto;
+    padding: 0 5px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 12px;
+    background-color: #f1efef;
+}
+
+.contacts .right {
+    flex: 1 1 auto;
+}
+
+.contacts .list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+    justify-content: flex-end;
+}
+.contacts .list li {
+	margin: 0 1em;
+}
+
+
+/* BG's*/
+
+.box-bg {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #2f7f42;
+}
+
+.systemreq-bg {
+    background-image: url(images/bg_2.jpg);
+}
+
+.mainoffer-bg {
+    background-image: url(images/bg_0.jpg);
+}
+
+.howitworks-bg {
+    background-image: url(images/bg_1.jpg);
+}
+
+.order-bg {
+    background-color: #5ba5d9;
+}
+
+.contacts-bg {
     background-color: #eaeaea;
+}
+
+
+/* media q*/
+
+@media screen and (max-width: 470px) {
+    * {
+        word-break: break-all;
+    }
+    .header {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    .box-bg {
+        background-image: none !important;
+        background-attachment: scroll;
+    }
 }
