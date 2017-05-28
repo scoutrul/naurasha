@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css">
     <script src="https://cdn.jsdelivr.net/jquery.lightslider/1.1.1/js/jquery.lightslider.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.lightslider/1.1.1/css/jquery.lightslider.min.css">
+    <script type="text/javascript" src="js/CountDownJS.js"></script>
 </head>
 
 <body>
+    <header class="header flexrow">
+        <!--seporator-->
+    </header>
     <header class="header sticky">
         <div class="container">
             <div class="logo"><img src="images/logo_naura.png" alt="ООО Научные Развлечения"></div>
@@ -33,21 +37,22 @@
                 <div class="logo">
                     <img src="images/logo_naurasha.png" alt="Наураша в стране Наурандии">
                 </div>
-                <div class="text">
-                    Почему мороженое холодное? Как остывает чай? Зачем врачи измеряют температуру? Не знаете, как ответить ребенку на все эти вопросы? Наша лаборатория в игровой форме поможет разъяснить сложные физические и природные явления.
-                </div>
+                <h1 class="text">
+                    Почему мороженое холодное? Как остывает чай? Зачем врачи измеряют температуру? Не знаете, как ответить ребенку на все эти вопросы? <br><br>
+                    Наша лаборатория в игровой форме поможет разъяснить сложные физические и природные явления.
+                </h1>
                 <div class="buttons">
                     <button class="button order">
                         <div class="title">Заказать лабораторию</div>
                         <div class="price">
                             <div>5,999р</div>
-                    	</div>
+                        </div>
                     </button>
                     <button class="button demo">
                         <div class="title">Демо-версия</div>
                         <div class="price">
                             <div>0р</div>
-                    	</div>
+                        </div>
                     </button>
                 </div>
             </div>
@@ -129,7 +134,8 @@
                 <script type="text/javascript">
                 $(document).ready(function() {
                     $("#locations").lightGallery({
-                        download: false
+                        download: false,
+                        galleryId: 1
                     });
                 });
                 </script>
@@ -168,6 +174,18 @@
                     </script>
                 </div>
                 <div class="right">
+                    <ul id="inbox">
+                        <li data-src="images/photos/box1.jpg"><img src="images/photos/box1_thumb.jpg" alt="Коробка Наураша снаружи"></li>
+                        <li data-src="images/photos/box2.jpg"><img src="images/photos/box2_thumb.jpg" alt="Коробка Наураша  внутри"></li>
+                    </ul>
+                    <script type="text/javascript">
+                    $(document).ready(function() {
+                        $("#inbox").lightGallery({
+                            download: false,
+                            galleryId: 2
+                        });
+                    });
+                    </script>
                     <ul class="list">
                         <li>Программное обеспечение</li>
                         <li>Датчик в виде Божьей Коровки. Наш датчик особенный: он содержит целых четыре сенсора и может измерять температуру, напряжение, громкость звука и освещённость.</li>
@@ -179,7 +197,6 @@
             </div>
         </div>
     </section>
-    <img src="images/separator.png" style="opacity: .8; max-width: 100%">
     <section class="systemreq">
         <div class="container">
             <h1>Системные требования:</h1>
@@ -194,55 +211,189 @@
             </ul>
         </div>
     </section>
+    <img src="images/seporator.png" class="seporator">
     <section class="reviews">
         <div class="container">
             <h1>Отзывы</h1>
-            <ul class="list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <ul class="list" id="testimon">
+                <li>
+                    <div class="item">
+                        <div class="img">
+                            <img src="https://pbs.twimg.com/profile_images/702361806975672320/ZP0U8E_K.jpg" alt=""></div>
+                        <div class="name">Азазэлла</div>
+                        <div class="text">Мой хулиган уже собрал свою первую электростанцию. Горжусь им!</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="img">
+                            <img src="https://1.gravatar.com/avatar/1587e768f06799e182bebd78a2e5b9fd?s=256&d=identicon&r=G" alt=""></div>
+                        <div class="name">Белладонна</div>
+                        <div class="text">Дочь выгнали из садика за переуспеваемость. Думаем какой институт выбрать?</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="img">
+                            <img src="http://www.freeiconspng.com/uploads/cartoon-mother-png-20.png" alt=""></div>
+                        <div class="name">Соня</div>
+                        <div class="text">Наураша - гордость наша!</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="img">
+                            <img src="https://68.media.tumblr.com/avatar_ac61507baec3_128.png" alt=""></div>
+                        <div class="name">Дина</div>
+                        <div class="text">### ###, ###### # ##### ## #####! #, ##### # #####, ###### ### ##### #######. ####</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="img">
+                            <img src="https://pbs.twimg.com/profile_images/702361806975672320/ZP0U8E_K.jpg" alt=""></div>
+                        <div class="name">Азазэлла</div>
+                        <div class="text">Мой хулиган уже собрал свою первую электростанцию. Горжусь им!</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="img">
+                            <img src="https://1.gravatar.com/avatar/1587e768f06799e182bebd78a2e5b9fd?s=256&d=identicon&r=G" alt=""></div>
+                        <div class="name">Белладонна</div>
+                        <div class="text">Дочь выгнали из садика за переуспеваемость. Думаем какой институт выбрать?</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="img">
+                            <img src="http://www.freeiconspng.com/uploads/cartoon-mother-png-20.png" alt=""></div>
+                        <div class="name">Соня</div>
+                        <div class="text">Наураша - гордость наша!</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="img">
+                            <img src="https://68.media.tumblr.com/avatar_ac61507baec3_128.png" alt=""></div>
+                        <div class="name">Дина</div>
+                        <div class="text">### ###, ###### # ##### ## #####! #, ##### # #####, ###### ### ##### #######. ####</div>
+                    </div>
+                </li>
             </ul>
+            <script type="text/javascript">
+            $(document).ready(function() {
+                $('#testimon').lightSlider({
+                    item: 3,
+                    cssEasing: 'ease-in-out',
+                    prevHtml: '<h1><</h1>',
+                    nextHtml: '<h1>></h1>',
+                    pager: false,
+                    auto: false,
+                    loop: true,
+                    pauseOnHover: true,
+                    pause: 4000,
+                    responsive: [{
+                        breakpoint: 940,
+                        settings: {
+                            item: 3
+                        }
+                    }, {
+                        breakpoint: 800,
+                        settings: {
+                            item: 2
+                        }
+                    }, {
+                        breakpoint: 600,
+                        settings: {
+                            item: 1
+                        }
+                    }]
+                });
+            });
+            </script>
         </div>
     </section>
-    <section class="order">
+    <section class="order-section">
         <div class="container">
+            <h1>До 5 июня <span>-1000 рублей</span></h1>
+            <div class="countdown">
+                <script>
+                countDown1 = new CountDownObject();
+
+                countDown1.TIME_ZONE = +3,
+                    countDown1.SET_YOUR_SEC = 0,
+                    countDown1.SET_YOUR_MIN = 0,
+                    countDown1.SET_YOUR_HOUR = 0,
+                    countDown1.SET_YOUR_DAY = 05,
+                    countDown1.SET_YOUR_MONTH = 06,
+                    countDown1.SET_YOUR_YEAR = 2017,
+
+                    countDown1.NUM_OF_ELEMENTS = 8,
+                    countDown1.TIME_ANIMATION = 300,
+                    countDown1.BACK_COLOR = "#325",
+                    countDown1.DIGITS_COLOR = "#fdfefd",
+                    countDown1.TEXT_COLOR = "#fdfefd",
+                    countDown1.IS_DYNAMIC_COLOR = false,
+
+                    countDown1.CANVAS_NAME = "CountDownCanvas";
+
+                countDown1.Start();
+                </script>
+            </div>
+        </div>
+        <div class="container flexrow flexwrap">
             <div class="left">
-                <h2>До 5 июня скидка 1000 рублей</h2>
+                <div class="img">
+                    <img src="images/hello_naurasha.png" alt="Детская цифровая лаборатория Наураша">
+                </div>
             </div>
             <div class="right">
                 <h2>Заказать лабораторию "Наураша в стране Наурандии"</h2>
                 <form action="">
-                    <input type="text">
-                    <input type="text">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                    <button>Заказать лабораторию</button>
+                    <input type="text" placeholder="Имя">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Телефон">
+                    <textarea name="" id="" cols="30" rows="2" placeholder="Примечание"></textarea>
+                    <div class="buttons">
+                        <button class="button demo">
+                            <div class="title">Заказать лабораторию</div>
+                            <div class="price">
+                                <div class="stroke">6,999</div>
+                                <div>5,999р</div>
+                            </div>
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
-    <footer class="contacts">
-        <div class="container">
+    <section class="contacts">
+        <div class="container flexrow flexwrap">
             <div class="left">
                 <form action="">
-                    <input type="text">
-                    <input type="text">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <input type="text" placeholder="E-mail">
+                    <textarea name="" id="" cols="30" rows="2" placeholder="Вопрос"></textarea>
                     <button>Отправить</button>
                 </form>
             </div>
             <div class="right">
-                <h2>Мы в сети...</h2>
-                <ul class="list">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <h2>Контакты</h2>
+                <ul class="list social">
+                    <li>Youtube</li>
+                    <li>FB</li>
+                    <li>VK</li>
+                    <li>IN</li>
+                    <li>ODNKSKI</li>
+                </ul>
+                <ul class="list contacts">
+                    <li>Телефон: 8(495) 766-24-23</li>
+                    <li>Email: naurasha@naurasha.ru</li>
                 </ul>
                 <div>Copyright 2017</div>
             </div>
         </div>
-    </footer>
+    </section>
 </body>
 
 </html>
