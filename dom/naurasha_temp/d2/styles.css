@@ -1,0 +1,352 @@
+/* FONTS */
+
+@font-face {
+    font-family: "Schlange_slab_bld";
+    src: url(./fonts/Schlange_slab_bld.otf);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed');
+
+/*
+*/
+
+
+/* SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+header,
+section,
+footer {
+    min-width: 100%;
+    padding: 5px;
+    display: flex;
+    flex: 1 0 auto;
+    -webkit-flex-grow: 1;
+    justify-content: center;
+}
+
+section {
+    padding: 5em 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 100%;
+    height: 100%;
+    max-width: 1025px;
+    min-width: 280px;
+    padding: 10px;
+}
+
+.flexrow {
+    flex-direction: row;
+}
+
+.flexwrap {
+    flex-wrap: wrap;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Schlange_slab_bld", sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+*/
+
+
+/* Sticky Header */
+
+body {
+    margin-top: 50px;
+}
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    background: #FFF;
+    box-shadow: 0 0px 5px 2px #c1c1c1;
+}
+
+.header .container {
+    display: table;
+    padding: 0;
+}
+
+.header .logo,
+.header .logo img {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header .phone {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header .phone .number {
+    font-family: "Schlange_slab_bld", sans-serif;
+    font-size: 2em;
+    display: block;
+}
+
+.header .phone .hot {
+    text-transform: uppercase;
+    font-size: 80%;
+}
+
+.header .order {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/*
+*/
+
+
+/* Main sections */
+
+.mainoffer {
+background-image: url(images/startbg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 640px;
+    max-height: 40vh;
+    align-items: center;
+    padding: 0;
+}
+
+.mainoffer .container {
+    margin: 10vh 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mainoffer .left {
+    max-width: 45%;
+    min-width: 360px;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.mainoffer .left img,
+.mainoffer .right img {
+    width: 100%;
+    height: 100%;
+}
+
+.mainoffer .right {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*
+*/
+
+.aboutit {
+	padding-top: 0;
+}
+.aboutit .container {
+    text-align: center;
+}
+
+.aboutit .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aboutit .list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 220px;
+    min-width: 25%;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.aboutit .list img {
+    margin: 10px;
+}
+
+.aboutit .list .bold {
+    font-weight: bold;
+}
+
+
+/*
+*/
+
+.howitworks {
+    background-color: #54ce90;
+    color: #FFF;
+    background-image: url(images/bg_1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.howitworks .container {}
+
+.howitworks .left {
+    flex: 1 1 40%;
+}
+
+.howitworks .right {
+    flex: 1 1 60%;
+}
+
+.howitworks .left .list,
+.howitworks .right .list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.howitworks .left .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.howitworks .left .list li {
+    display: flex;
+    align-items: center;
+    min-width: 40%;
+    font-family: "Schlange_slab_bld", sans-serif;
+    font-size: 2em;
+}
+
+.howitworks .left .list img {
+    margin: 10px;
+}
+
+.howitworks .right .list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.howitworks .right .list li {
+    flex: 1 0 50%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.howitworks .right .list img {
+    width: 220px;
+    height: 100%;
+    border: 1px solid #000;
+    margin: 1em;
+}
+
+
+/*
+*/
+
+.whatinside .container h1 {
+    width: 100%;
+}
+
+.whatinside .container .left {
+    flex: 1 1 55%;
+}
+
+.whatinside .container .right {
+    flex: 1 1 45%;
+}
+
+
+/*
+*/
+
+.systemreq {
+    background-image: url(images/sys_req_bg.jpg);
+    background-size: 940px;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    min-height: 540px;
+    color: #FFF;
+    font-size: 80%;
+}
+
+.systemreq .container {
+    align-items: center;
+    align-self: center;
+}
+
+.systemreq .list {
+    width: 280px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    text-shadow: 10px 5px 10px #000;
+}
+
+.systemreq .list li {
+    margin: 6px 0;
+}
+
+
+/*
+*/
+
+section.reviews {}
+
+section.order {}
+
+footer.contacts {}

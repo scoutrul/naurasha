@@ -1,0 +1,122 @@
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     font-family: "Tahoma", sans-serif;
+     color: #292929;
+ }
+ 
+ body.index {
+     display: flex;
+     height: 100%;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     background-image: url('images/index_bg.jpg');
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+ }
+ 
+ .index iframe {
+     outline: 1px solid rgba(239, 240, 232, 0.67);
+     outline-offset: -8px;
+     border-radius: 1em;
+     box-shadow: 0px 0px 30px 10px #201e1d;
+ }
+ 
+ .chunky {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     
+ }
+ .index .chunky {
+	margin: 2em;
+ }
+
+  .chunky button {
+  	margin: 0 !important;
+  	padding: 0 !important;
+  	background-color: #ec1a26 !important;
+  	border: 0 !important;
+  }
+ 
+ .chunky a,
+ .chunky button {
+     /* Normal State */
+     padding: .5em 1em;
+     margin: 1em;
+     width: auto;
+     height: auto;
+     color: #fff;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 2em;
+     font-weight: bold;
+     font-style: normal;
+     font-smoothing: antialiased;
+     -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+     -o-font-smoothing: antialiased;
+     -ms-font-smoothing: antialiased;
+     text-decoration: none;
+     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.50);
+     border-radius: 3px;
+     -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+     -o-border-radius: 3px;
+     -ms-border-radius: 3px;
+     border: 1px solid rgba(0, 0, 0, 0.50);
+     border-top: 1px solid rgba(0, 0, 0, 0.001);
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.10);
+     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.10);
+     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.10);
+     -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.10);
+     -ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.10);
+     cursor: pointer;
+ }
+ 
+ .chunky a:hover {
+     /* Hover State */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.25);
+     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.25);
+     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.25);
+     -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.25);
+     -ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.25);
+     -webkit-animation: glow 1s infinite ease-in-out;
+     cursor: pointer;
+ }
+ 
+ .chunky a:active,
+ .chunky button:active {
+     /* Active State (clicked on) */
+     border-top: 1px solid rgba(0, 0, 0, 0.55);
+     -webkit-animation: none;
+     cursor: pointer !important;
+ }
+ 
+ .chunky16 a {
+     background: #0066cc
+ }
+ 
+ .chunky19 a {
+     background: #993399
+ }
+ 
+ @-webkit-keyframes glow {
+     0% {
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.35);
+         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.35);
+         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.35);
+         -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.35);
+         -ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.35);
+     }
+     100% {
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.18);
+         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.18);
+         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.18);
+         -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.18);
+         -ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35), 0px 1px 3px rgba(0, 0, 0, 0.18), inset 0px -3px 0px rgba(0, 0, 0, 0.35), inset 0px 14px 14px rgba(255, 255, 255, 0.18);
+     }
+ }
