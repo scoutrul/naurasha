@@ -11,7 +11,7 @@
 	$headers .= "Content-type: text/plain; charset=\"utf-8\"" . "\r\n";
 
 
- 	$subject = 'Cообщение с сайта dom.naurasha.ru / от:  ' . $feed_name; 
+ 	$subject = 'DOM.NAURASHA.RU сообщение:  ' . $feed_name; 
  	
 	$body_message = 'DOM.NAURASHA.RU'. "\r\n";   
  	$body_message .= 'Имя: ' . $feed_name . "\r\n";      

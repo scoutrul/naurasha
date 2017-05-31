@@ -21,13 +21,15 @@ html {
     padding: 0;
     margin: 0;
     height: 100%;
+    width: 100%;
+    position: relative;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-family: 'Open Sans', sans-serif;
     line-height: 150%;
     color: #3C1231;
@@ -39,7 +41,9 @@ section {
     max-width: 100%;
     padding: 5px;
     display: flex;
+    display: -webkit-flex;
     flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
     -webkit-flex-grow: 1;
     justify-content: center;
     flex-direction: column;
@@ -47,6 +51,7 @@ section {
 
 section {
     padding: 5em 0;
+    overflow: hidden;
 }
 
 .container {
@@ -54,6 +59,7 @@ section {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
     max-width: 1025px;
     padding: 10px;
     margin: auto;
@@ -62,38 +68,35 @@ section {
 
 .buttons {
     display: flex;
+    display: -webkit-flex;
     width: 100%;
     justify-content: space-between;
     margin: 20px 0;
     flex-wrap: wrap;
 }
 
-.header .buttons {
-    margin: auto;
-    width: auto;
-    justify-content: flex-end;
-}
-
 .buttons .button {
     display: flex;
+    display: -webkit-flex;
     font-size: 1em;
-    padding: 1em;
+    padding: 7px 20px;
     box-shadow: 4px 3px 6px rgba(31, 31, 31, 0.72);
     border-radius: 2em;
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1em;
+    margin: 5px 2px;
+    flex: 1;
+    -webkit-flex: 1;
 }
 
 .buttons .title {
     min-height: 40px;
-    padding: 0 12px;
+    padding: 0 10px 0 0;
     color: #fff;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
-    word-break: break-word;
     line-height: 110%;
     display: flex;
     align-items: center;
@@ -102,7 +105,7 @@ section {
 
 .buttons .price {
     min-height: 40px;
-    padding: 0 12px;
+    padding: 0 0 0 10px;
     font-weight: 800;
     text-shadow: 1px 1px rgb(4, 64, 82);
     text-transform: uppercase;
@@ -117,10 +120,8 @@ section {
 }
 
 .buttons .button.order {
-    flex: 1;
     min-width: 250px;
     max-width: 350px;
-    margin-right: 1em;
     background: -webkit-linear-gradient(top, #33deff 0%, #01afd2 100%);
 }
 
@@ -129,7 +130,6 @@ section {
 }
 
 .buttons .button.demo {
-    margin-right: 1em;
     background: -webkit-linear-gradient(top, rgb(237, 12, 12) 0%, rgb(224, 68, 32) 100%);
 }
 
@@ -158,9 +158,21 @@ button:hover {
     cursor: pointer;
 }
 
+textarea,
+input {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .seporator {
+    text-align: center;
+}
+
+.seporator img {
     opacity: .8;
-    max-width: 70%
+    max-width: 70%;
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .flexrow {
@@ -181,12 +193,11 @@ h3,
 h4 {
     color: #0d1d3a;
     line-height: 120%;
-    word-break: break-word;
     font-family: "Schlange_slab_bld", sans-serif;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.3em;
     text-align: center;
     margin-top: 0;
 }
@@ -208,17 +219,28 @@ form {
     flex-direction: column;
 }
 
+.lSSlideWrapper {}
+
+.lSSlideOuter {
+    margin: auto;
+}
+
+.lSSlideOuter li {
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
 
 /*
 */
 
 .header {
-    display: flex;
     transition: .3s ease-in;
     padding: 0;
 }
 
-.header.sticky {
+.header_sticky {
     z-index: 10;
     position: fixed;
     top: 0;
@@ -227,46 +249,47 @@ form {
 }
 
 .header .container {
-    display: flex;
     padding: 0;
     margin: auto;
     justify-content: space-between;
     align-items: center;
 }
 
-.header .logo {
-    display: flex;
+.header .container > div {
+    display: inline-block;
 }
 
-.header .logo img {
-    height: 40px;
-    padding: 3px;
+.header .logo {
+    margin: 0;
 }
 
 .header .phone {
-    flex: 1 1 auto;
-    display: flex;
+    display: flex !important;
+    flex-wrap: wrap;
+    margin: auto auto auto 1em;
+    line-height: 100%;
 }
 
 .header .phone .number {
     font-weight: 900;
     font-size: 2em;
-    display: inline-block;
+    margin-right: 1em;
     color: #585858;
-    margin: 0 1em;
 }
 
 .header .phone .hot {
     text-transform: uppercase;
-    font-size: .7em%;
+    font-size: .8em;
 }
 
-.header button.hat {
-    margin: auto 5px !important;
-    box-shadow: none !important;
-    padding: 5px 10px;
+.header .button_hat {
+    margin: auto 0 auto auto;
+    padding: 3px 8px;
     background: -webkit-linear-gradient(top, rgb(237, 12, 12) 0%, rgb(224, 68, 32) 100%);
     color: #FFF;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
 }
 
 .header.hidden {
@@ -278,6 +301,13 @@ form {
     opacity: 1;
 }
 
+.header .buttons {
+    margin: auto;
+    width: auto;
+    justify-content: flex-end;
+    flex: 1;
+}
+
 
 /*
 */
@@ -286,10 +316,10 @@ form {
 /* Main sections */
 
 .mainoffer {
-    min-height: 640px;
     align-items: center;
     color: #FFF;
     padding: 2em 0 0;
+    margin-top: 50px;
 }
 
 .mainoffer .container {
@@ -298,10 +328,10 @@ form {
 }
 
 .mainoffer .left {
-    max-width: 35%;
     min-width: 310px;
-    flex: 1 0 45%;
-    padding-right: 2em;
+    flex: 1;
+    align-self: flex-start;
+    text-align: center;
 }
 
 .mainoffer .right img {
@@ -309,20 +339,25 @@ form {
 }
 
 .mainoffer .left img {
-    width: 140%
+    width: 140%;
+    max-width: 480px;
+    transform: translate3d(-50px, 0px, 0);
+    z-index: 1;
 }
 
 .mainoffer .right {
-    flex: 1 1 50%;
+    flex: 1 1 0;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    z-index: 0;
+    max-width: 600px;
 }
 
 .mainoffer h1 {
     margin: 2em auto;
-    font-size: 140%;
-    line-height: 140%;
+    font-size: 110%;
+    line-height: 120%;
     color: #fdfefd;
     text-align: left;
 }
@@ -358,8 +393,8 @@ form {
     flex-direction: column;
     align-items: center;
     flex: 1 1 220px;
-    min-width: 25%;
-    max-width: 75%;
+    min-width: 250px;
+    max-width: 80%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -387,53 +422,47 @@ form {
 
 .howitworks .text {
     padding: 10px 20px;
-    border: 0 solid #bed6be;
     border-left-width: 1px;
     text-align: justify;
     line-height: 170%;
     margin: 2em 0 0;
 }
 
-.howitworks .left {
-    flex: 1 1 40%;
+.howitworks .text span {
+    color: #fff236;
 }
 
-.howitworks .right {
-    flex: 1 1 60%;
-}
-
-.howitworks .left .list,
-.howitworks .right .list {
+.howitworks .list {
     padding: 0;
     margin: 0;
     list-style: none;
-}
-
-.howitworks .left .list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
 }
 
-.howitworks .left .list li {
+.howitworks .list li {
     display: flex;
     align-items: center;
-    min-width: 180px;
-    font-family: "Schlange_slab_bld", sans-serif;
-    font-size: 2em;
-    width: 100%;
+    flex-direction: column;
+    min-width: 45%;
 }
 
-.howitworks .left h4 {
+.howitworks .header_icon {
+    display: flex;
+    align-items: center;
+}
+
+.howitworks .header_icon h4 {
     color: #FFF;
     flex: 1 1 auto;
-    word-break: break-all;
     display: inline-block;
     vertical-align: middle;
-    font-size: 70%;
+    font-size: 1em;
 }
 
-.howitworks .left .list img {
+.howitworks .header_icon img {
     margin: 10px;
     flex: 0 0 auto;
     width: 90px;
@@ -441,22 +470,7 @@ form {
     vertical-align: middle;
 }
 
-.howitworks .right .list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-around;
-}
-
-.howitworks .right .list li {
-    flex: 1 0 50%;
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    min-width: 200px;
-}
-
-.howitworks .right .list img {
+.howitworks .pic img {
     max-width: 100%;
     width: 220px;
     height: 100%;
@@ -509,20 +523,12 @@ form {
     margin: 6px 0px
 }
 
-.whatinside .lSSlideOuter {
-    max-width: 640px;
-    margin: auto;
-}
-
-.whatinside .lSSlideWrapper {
-    max-width: 90vw;
-}
-
 .whatinside #inbox {
     display: flex;
     justify-content: center;
     padding: 0;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .whatinside #inbox li {
@@ -530,6 +536,8 @@ form {
     padding: 0 1em;
     display: flex;
     flex: 1 0 30%;
+    text-align: center;
+    flex-direction: column;
 }
 
 .whatinside #inbox li img {
@@ -549,6 +557,28 @@ form {
     outline: 0px solid #f4f58f;
 }
 
+.glide__slide:active {
+    cursor: col-resize;
+}
+
+.glide__slide img {
+    width: 100%;
+}
+
+.glide__bullets,
+.glide__arrows {
+    text-align: center;
+}
+
+.glide__arrow {
+    cursor: pointer;
+    margin: auto 0 auto auto;
+    padding: 3px 8px;
+    background: -webkit-linear-gradient(top, rgb(237, 12, 12) 0%, rgb(224, 68, 32) 100%);
+    color: #FFF;
+    border-radius: 20px;
+    font-size: 13px;
+}
 
 /*
 */
@@ -557,34 +587,33 @@ form {
     max-height: 560px;
     margin-bottom: 130px;
     padding-top: 140px;
+    position: relative;
+    overflow: visible;
 }
 
 .systemreq h1 {
     color: #fdfefd;
-    margin: 0 auto 0;
-    position: absolute;
-    width: 100%;
-    top: 0;
+    margin: 30px auto 0;
 }
 
 .systemreq .container {
-    align-items: center;
     background-image: url(images/naurasha_screen.png);
-    background-size: cover;
+    background-size: 1010px;
     background-repeat: no-repeat;
-    background-position: 50% 100%;
-    min-height: 670px;
-    color: #FFF;
-    transform: translateY(50px);
+    background-position: 50% 50px;
+    min-height: 800px;
+    transform: translateY(110px);
 }
 
 .systemreq .list {
-    width: 280px;
+    min-width: 280px;
+    max-width: 400px;
     padding: 0;
     display: flex;
     flex-direction: column;
-    transform: translateY(180px);
+    transform: translateY(140px);
     margin: 0 auto;
+    color: #FFF;
 }
 
 .systemreq .list span {
@@ -594,6 +623,7 @@ form {
 
 .systemreq .list li {
     margin: 3px 0;
+    list-style: none;
 }
 
 
@@ -615,7 +645,7 @@ form {
     flex-direction: column;
     margin: auto;
     font-size: 90%;
-    padding: 0px 50px;
+    padding: 0px 1em;
 }
 
 .reviews #testimon {
@@ -623,8 +653,8 @@ form {
 }
 
 .reviews #testimon img {
-    max-height: 150px;
-    max-width: 150px;
+    max-height: 130px;
+    max-width: 130px;
     border-radius: 50%;
     border: 1px solid #CCC;
     margin: auto;
@@ -650,11 +680,18 @@ form {
 /*
 */
 
+.photogallery #photoSlider img {
+    margin: auto;
+}
+
+
+/*
+*/
+
 .order-section {}
 
 .order-section h1 {
     color: #fff236;
-    text-shadow: 10px 5px 10px #000;
 }
 
 .order-section h1 span {
@@ -675,35 +712,40 @@ form {
     flex-direction: column;
     flex: 1 1 40%;
     margin: 0 auto;
-    min-width: 260px;
-    max-width: 620px;
+    justify-content: center;
 }
 
 .order-section .img {
     background: url(images/photos/product.jpg);
-    height: 420px;
+    display: flex;
     width: 100%;
+    height: 100%;
     background-size: contain;
-    margin-bottom: 50px;
     background-repeat: no-repeat;
+    margin: auto;
+    min-height: 220px;
 }
 
 .order-section .countdown {
-    margin: 0 auto 30px;
+    margin: 0 auto;
     width: 100%
 }
 
+.order-section .countdown .actition {
+    color: #FFF;
+}
+
 .order-section .right {
-    flex: 1 1 40%;
+    flex: 1 1 30%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: center;
-    margin: 0 3em;
+    margin: 0 2em;
 }
 
 .order-section h2 {
     color: #fff236;
+    margin: 0;
 }
 
 .order-section h2 span {
@@ -712,10 +754,8 @@ form {
 }
 
 .order-section sup {
-    font-size: 70%;
+    font-size: 100%;
     display: block;
-    text-align: right;
-    padding: 0 2em;
     color: #FFF;
 }
 
@@ -731,7 +771,7 @@ form {
     padding: 1em 2em;
     border-radius: 2em;
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
+    border: 1px solid rgba(25, 56, 77, 0.55);
 }
 
 .order-section form button {
@@ -766,12 +806,6 @@ form {
     font-size: 70%
 }
 
-.order-section canvas {
-    width: 80%;
-    margin: auto;
-    display: block;
-}
-
 
 /*
 */
@@ -792,35 +826,6 @@ form {
     display: flex;
     height: 100%;
     align-items: flex-start;
-}
-
-.contacts form input,
-.contacts form textarea {
-    font-family: 'Open Sans', sans-serif;
-    padding: 0 5px;
-    border: 0;
-    border-radius: 3px;
-    font-size: 11px;
-    background-color: #f1efef;
-    width: 100%;
-}
-
-.contacts form input {
-    flex: 0 1 auto;
-    margin: 2px 0;
-}
-
-.contacts form textarea {
-    flex: 1 1 auto;
-}
-
-.contacts form button {
-    border-radius: 15px;
-    line-height: 11px;
-    margin: 3px 0;
-    font-size: 80%;
-    background-color: rgb(140, 147, 158);
-    color: #eaeaea;
 }
 
 .contacts .right {
@@ -866,7 +871,7 @@ form {
 
 .mainoffer-bg {
     background-image: url(images/bg_0.jpg);
-    background-color: #78cfea;
+    background-color: #5ba5d9
 }
 
 .howitworks-bg {
@@ -883,28 +888,6 @@ form {
 }
 
 
-/* media q*/
-
-@media screen and (max-width: 620px) {
-    * {
-        word-break: break-all;
-    }
-    .header {
-        display: none !important;
-    }
-    .section {
-        min-width: 680px
-    }
-}
-
-@media screen and (max-width: 825px) {
-    .box-bg {
-        background-image: none !important;
-        background-attachment: scroll;
-    }
-}
-
-
 /* MODAL */
 
 .modal_container {
@@ -916,6 +899,8 @@ form {
     position: fixed;
     top: 0;
     left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
     width: 100%;
     height: 100%;
     background-color: rgba(23, 23, 23, 0.93);
@@ -945,7 +930,7 @@ form {
     max-width: 600px;
     padding: 2em;
     background-color: #FFF;
-        border-radius: 2px;
+    border-radius: 2px;
 }
 
 .modal_container input,
@@ -967,4 +952,40 @@ form {
 .modal_button_hidden {
     opacity: 0;
     padding: 5px;
+}
+
+
+/* media q*/
+
+@media screen and (max-width: 660px) {
+    .mainoffer .left img {
+        width: 100%;
+        transform: translate3d(-0, 0, 0);
+    }
+    .mainoffer {
+        margin-top: 0px;
+    }
+    .photogallery #photoSlider img {
+        margin: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .howitworks h1 {
+        color: #fff236;
+        font-size: 1.6em;
+    }
+    .howitworks .left h4 {
+        font-size: .64em
+    }
+    .header {
+        font-size: 40%
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 420px) {
+    .header {
+        display: none !important;
+    }
 }

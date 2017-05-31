@@ -1,45 +1,4 @@
 $(document).ready(function() {
-    $('#photoSlider').lightSlider({
-        item: 1,
-        cssEasing: 'ease-in-out',
-        loop: true,
-        auto: true,
-        pager: true
-    });
-
-
-    $('#testimon').lightSlider({
-        item: 2,
-        cssEasing: 'ease-in-out',
-        prevHtml: '<h1><</h1>',
-        nextHtml: '<h1>></h1>',
-        pager: false,
-        auto: false,
-        loop: true,
-        pauseOnHover: true,
-        pause: 4000,
-        responsive: [{
-            breakpoint: 800,
-            settings: {
-                item: 2
-            }
-        }, {
-            breakpoint: 600,
-            settings: {
-                item: 1
-            }
-        }]
-    });
-
-    $("#locations").lightGallery({
-        download: false,
-        galleryId: 1
-    });
-    $("#inbox").lightGallery({
-        download: false,
-        galleryId: 2
-    });
-
 
 
     $("#header-order-button, #mainoffer-order-button").click(function() {
@@ -50,21 +9,31 @@ $(document).ready(function() {
 
 
 
-    // HEADER FADE-IN
-    var distance = $('.aboutit h1').offset().top,
-        $window = $(window);
+    //TIMER COUNTDOWN SHOW
+    var container_offset = $('.order-section').offset().top;
+    var countdown_offset = $('.countdown').offset().top;
+    var countainer_h = $('.order-section').height();
+    var countdown_h = $('#cta_countdown').height();
 
-    $('.header').addClass('hidden');
+    $('.countdown').css({ visibility: 'hidden' });
+
+    var $window = $(window);
     $window.scroll(function() {
-        if ($window.scrollTop() >= distance) {
-            $('.header').addClass('visible');
-            $('.header').removeClass('hidden');
-        } else {
-            $('.header').addClass('hidden');
-            $('.header').removeClass('visible');
+        if ($window.scrollTop() <= countdown_offset - screen.height) {
+            $('.countdown').css({ visibility: 'hidden' });
 
+        } else {
+            if ($window.scrollTop() < countdown_offset + countdown_h) {
+                $('.countdown').css({ visibility: 'visible' });
+
+            } else {
+                $('.countdown').css({ visibility: 'hidden' });
+
+            }
         }
     });
+    // 
+    
 
     // BUTTON DEMO SHOW MODAL WINDOW
     $('.mainoffer button.demo, #modal_demo_close').on('click', function() {
@@ -85,61 +54,91 @@ $(document).ready(function() {
     });
 
 
-    function validateEmail(email) {
-        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-    }
 
-    var modalCheck = function() {
-        $(".modal_result").text("");
+        // reset modals
+    // $("#modal_demo_send, #modal_feed_send").on('click', function() {
+    //     $(".modal_result").text("");
 
-        var demo_email = $("#modal_demo_email").val();
+    //     var demo_email = $("#modal_demo_email").val();
 
-        var feed_email = $("#modal_feed_email").val();
-        var feed_name = $("#mofal_feed_name").val();
-        var feed_message = $("#modal_feed_message").val();
+    //     var feed_email = $("#modal_feed_email").val();
+    //     var feed_name = $("#modal_feed_name").val();
+    //     var feed_message = $("#modal_feed_message").val();
+    // })
+            var demo_email = $("#modal_demo_email").val();
+            var feed_email = $("#modal_feed_email").val();
+            var feed_name = $("#modal_feed_name").val();
+            var feed_message = $("#modal_feed_message").val();
 
+    var modals = {
+        reset: function(){
+            $(".modal_result").text("");
+        },
+        validate_email: function(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        },
 
-        if (validateEmail(demo_email)) {
-            $(".modal_result_demo").text("Ссылка на установочный файл выслана!").css("color", "green");
-            $(".modal_send").addClass('modal_button_hidden');
+        modal_demo_check: function() {
+            modals.reset;
 
-            let dataString = 'demo_email=' + demo_email;
+            if (modals.validate_email(demo_email)) {
+                $(".modal_result_demo").text("Ссылка на установочный файл выслана!").css("color", "green");
+                $(".modal_send").addClass('modal_button_hidden');
 
-            $.ajax({
-                type: "POST",
-                url: "mail-demo.php",
-                data: dataString,
-                success: function() {
-                    console.log('Sent demo')
-                }
-            });
-        } else if (validateEmail(feed_email)) {
-            $(".modal_result_feed").text("Ваше сообщение отправлено!").css("color", "green");
-            $(".modal_send").addClass('modal_button_hidden');
+                let dataString = 'demo_email=' + demo_email;
 
-            let dataString = 'feed_email=' + feed_email + '&feed_name=' + feed_name + '&feed_message=' + feed_message;
+                $.ajax({
+                    type: "POST",
+                    url: "#",
+                    data: dataString,
+                    success: function() {
+                        console.log('Sent demo')
+                    }
+                });
 
-            $.ajax({
-                type: "POST",
-                url: "mail-feed.php",
-                data: dataString,
-                success: function() {
-                    console.log('Sent feed')
-                }
-            });
+            } else {
+                $(".modal_result").text("Не корректный ввод").css("color", "red");
+            }
+            return false;
+        },
+        modal_feed_check: function() {
+            modals.reset;
 
-        } else {
-            $(".modal_result").text("Не корректный ввод").css("color", "red");
+             if (modals.validate_email(feed_email)) {
+                $(".modal_result_feed").text("Ваше сообщение отправлено!").css("color", "green");
+                $(".modal_send").addClass('modal_button_hidden');
+
+                let dataString = 'feed_email=' + feed_email + '&feed_name=' + feed_name + '&feed_message=' + feed_message;
+
+                $.ajax({
+                    type: "POST",
+                    url: "#",
+                    data: dataString,
+                    success: function() {
+                        console.log('Sent feed')
+                    }
+                });
+
+            } else {
+                $(".modal_result").text("Не корректный ввод").css("color", "red");
+            }
+            return false;
         }
-        return false;
-    }
+    };
 
-    $("#modal_demo_send").on("click", modalCheck);
-    $("#modal_feed_send").on("click", modalCheck);
+
+
+    $("#modal_demo_send").on("click", modals.modal_demo_check);
+    $("#modal_feed_send").on("click", modals.modal_feed_check);
 
 
     // demo sender =>
 
 
 });
+
+
+ // "Спасибо за заказ! 
+ // В ближайшее время* наш менеджер свяжется с вами. 
+ // в будни с 10 до 18"
