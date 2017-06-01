@@ -3,15 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> _ Not allowed -->
     <title>Наураша в стране Наурандии</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/lightgallery/1.3.9/js/lightgallery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css">
     <script src="https://cdn.jsdelivr.net/jquery.lightslider/1.1.1/js/jquery.lightslider.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.lightslider/1.1.1/css/jquery.lightslider.min.css">
-    <script type="text/javascript" src="js/CountDownJS.js"></script>
-    <link rel="stylesheet" href="glide.core.css">
+    <link rel="stylesheet" href="css/glide.core.css">
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -20,11 +23,11 @@
             <div class="logo"><img src="images/logo_naura.png" alt="ООО Научные Развлечения"></div>
             <div class="phone">
                 <div class="number">8(495) 766-24-23</div>
-                <div class="hot">горячая линия "Наураша"</div>
+                <div class="hot"></div>
             </div>
-            <div class="button_hat" id="header-order-button">
+            <a class="button_red header-order-button" id="header-order-button">
                 Заказать
-            </div>
+            </a>
         </div>
     </header>
     <!--  -->
@@ -42,13 +45,15 @@
                 </h1>
                 <div class="buttons">
                     <button class="button order" id="mainoffer-order-button">
-                        <div class="title">Купить лабораторию</div>
+                        <div class="title">Купить
+                            <br>лабораторию</div>
                         <div class="price">
                             <div>5,990 руб.</div>
                         </div>
                     </button>
-                    <button class="button demo">
-                        <div class="title">Демо-версия</div>
+                    <button class="button demo" id="mainoffer-demo-button">
+                        <div class="title">Демо
+                            <br>версия</div>
                         <div class="price">
                             <div>бесплатно</div>
                         </div>
@@ -86,7 +91,7 @@
     </section>
     <!--  -->
     <section class="howitworks howitworks-bg box-bg withshadow">
-        <div class="container flexrow flexwrap">
+        <div class="container flexwrap">
             <h1>Изучение четырёх физических явлений, для каждого из которых создана отдельная лаборатория!</h1>
             <ul id="locations" class="list">
                 <li data-src="images/locations/game_light.jpg">
@@ -107,6 +112,8 @@
                         <img src="images/locations/game_electro_thumb.jpg" alt="Лаборатория Наураша Электричество">
                     </div>
                 </li>
+            </ul>
+            <ul id="locations2" class="list">
                 <li data-src="images/locations/game_sound.jpg">
                     <div class="header_icon">
                         <img src="images/icons/lab_sound.png" alt="Звук">
@@ -134,32 +141,34 @@
     <!--  -->
     <!--  -->
     <section class="whatinside">
-        <div class="container">
+        <div class="container" style="min-height: 685px;">
             <h1>Что вы найдете в коробке</h1>
             <div id="Glide" class="glide">
                 <div class="glide__wrapper">
                     <ul class="glide__track">
                         <li class="glide__slide">
                             <img src="images/photos/box1.jpg" alt="Коробка Наураша снаружи">
-                            <h3>Много часов захватывающих экспериментов для вашего ребенка</h3>
+                            <h4>Много часов<br>захватывающих экспериментов<br>для вашего ребенка</h4>
                         </li>
                         <li class="glide__slide">
                             <img src="images/photos/box2.jpg" alt="Коробка Наураша  внутри">
-                            <h3>Различные предметы для проведения экспериментов и уникальное программное обеспечение.</h3>
+                            <h4>Различные предметы<br>для проведения экспериментов<br>и уникальное программное обеспечение.</h4>
                         </li>
                         <li class="glide__slide">
                             <img src="images/photos/kvest.jpg" alt="Квест Наураша">
-                            <h3>Увлекательный образовательный квест</h3>
+                            <h4>Увлекательный образовательный квест</h4>
                         </li>
                         <li class="glide__slide">
                             <img src="images/photos/box0.jpg" alt="Датчик Божья Коровка Наураша">
-                            <h3>Датчик в виде Божьей Коровки<br>Наш датчик особенный: он содержит 4 сенсора и измеряет температуру, напряжение, громкость звука и освещённость.</h3>
+                            <h4>Датчик в виде Божьей Коровки<br>Наш датчик особенный:<br>
+                            он содержит 4 сенсора и измеряет<br> температуру, напряжение,<br>громкость звука и освещённость.</h4>
                         </li>
                     </ul>
                 </div>
                 <div class="glide__arrows">
-                    <button class="glide__arrow prev" data-glide-dir="<">Пред.</button>
-                    <button class="glide__arrow next" data-glide-dir=">">След.</button>
+                    <button class="glide__arrow prev button_red" data-glide-dir="<" style="float:right">
+                        <</button>
+                            <button class="glide__arrow next button_red" data-glide-dir=">">></button>
                 </div>
             </div>
             <!-- 
@@ -291,13 +300,14 @@
      -->
     <section class="order-section order-bg box-bg">
         <div class="container">
-            <h2 id="order-form"><span>Закажите лабораторию</span> "Наураша в стране Наурандии"<span> со скидкой!</span>
+            <h2 id="order_anchor"><span>Закажите лабораторию</span><br> "Наураша в стране Наурандии"<span><br>со скидкой!</span>
                 </h2>
         </div>
         <div class="container flexrow flexwrap">
             <div class="left">
                 <div class="countdown" id="cta_countdown">
                     <div class="actition">Окончание акции:</div>
+                    <script type="text/javascript" src="js/CountDownJS.js"></script>
                     <script>
                     countDown1 = new CountDownObject();
                     countDown1.TIME_ZONE = +3,
@@ -321,21 +331,20 @@
                 </div>
             </div>
             <div class="right">
-                <form action="">
+                <form>
                     <sup>Заполните короткую форму, и наш менеджер свяжется с Вами</sup>
-                    <input type="text" placeholder="Имя">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Телефон">
-                    <textarea name="" id="" cols="30" rows="2" placeholder="Примечание"></textarea>
-                    <div class="buttons">
-                        <button class="button demo">
-                            <div class="title">Заказать</div>
-                            <div class="price">
-                                <div><strike>6,990р</strike></div>
-                                <div>5,990р</div>
-                            </div>
-                        </button>
-                    </div>
+                    <input type="text" placeholder="Имя" id="order_name">
+                    <input type="text" placeholder="E-mail" id="order_email">
+                    <input type="text" placeholder="Телефон" id="order_phone">
+                    <textarea id="order_message" cols="30" rows="2" placeholder="Комментарий"></textarea>
+                    <div class="order_result"></div>
+                    <button class="button demo" id="modal_order_send">
+                        <div class="title">Заказать</div>
+                        <div class="price">
+                            <div><strike>6,990р</strike></div>
+                            <div>5,990р</div>
+                        </div>
+                    </button>
                 </form>
             </div>
         </div>
@@ -345,12 +354,10 @@
     <section class="contacts contacts-bg">
         <div class="container flexrow flexwrap">
             <div class="left">
-                <div class="buttons">
-                    <button class="button order" id="modal_feed_open">
-                        <div class="title">Есть вопросы</div>
-                        <div class="price">?</div>
-                    </button>
-                </div>
+                <button class="button order" id="modal_feed_open">
+                    <div class="title">Есть вопросы</div>
+                    <div class="price">?</div>
+                </button>
             </div>
             <div class="right">
                 <ul class="list social">
@@ -367,95 +374,89 @@
                         <a href="https://www.instagram.com/nau_razvlecheniya/" target="_blank"><img src="images/icons/soc_in.png" alt=""></a>
                     </li>
                 </ul>
-                <ul class="list contact">
-                    <li>
-                        <div style="display: inline-block;">Горячая линия:</div>
-                        <div style="display: inline-block;"><strong>8(495) 766-24-23</strong></div>
-                    </li>
-                    <li>E-mail: <a href="mailto:support@naurasha.ru">support@naurasha.ru</a></li>
-                    <li> &copy; 2017г. <a href="http://naumag.ru/">ООО "Научные Развлечения"</a></li>
-                </ul>
             </div>
+            <ul class="list copyright">
+                <li>
+                    <div style="display: inline-block;">Горячая линия:</div>
+                    <div style="display: inline-block;"><strong>8(495) 766-24-23</strong></div>
+                </li>
+                <li>E-mail: <a href="mailto:support@naurasha.ru">support@naurasha.ru</a></li>
+                <li> &copy; 2017г. <a href="http://naumag.ru/">ООО "Научные Развлечения"</a></li>
+            </ul>
         </div>
     </section>
     <script>
-    $('#photoSlider').lightSlider({
-        item: 1,
-        cssEasing: 'ease-in',
-        loop: true,
-        auto: true,
-        pause: 7000,
-        pager: true,
-    });
-
-    $('#whatinside_slider').lightSlider({
-        item: 1,
-        cssEasing: 'ease-in',
-        loop: true,
-        auto: true,
-        pause: 7000,
-        pager: true,
-    });
+    $(document).ready(function() {
+        $('#photoSlider').lightSlider({
+            item: 1,
+            cssEasing: 'ease-in',
+            loop: true,
+            auto: true,
+            pause: 7000,
+            pager: true,
+        });
 
 
-    $('#testimon').lightSlider({
-        item: 3,
-        controls: false,
-        cssEasing: 'ease-in',
-        prevHtml: '<h1><</h1>',
-        nextHtml: '<h1>></h1>',
-        pager: true,
-        auto: true,
-        loop: true,
-        pauseOnHover: true,
-        pause: 4000,
-        enableDrag: false,
-        responsive: [{
-            breakpoint: 800,
-            settings: {
-                item: 2
-            }
-        }, {
-            breakpoint: 600,
-            settings: {
-                item: 1
-            }
-        }]
-    });
+        $('#testimon').lightSlider({
+            item: 2,
+            controls: false,
+            cssEasing: 'ease-in',
+            prevHtml: '<h1><</h1>',
+            nextHtml: '<h1>></h1>',
+            pager: true,
+            auto: true,
+            loop: true,
+            pauseOnHover: true,
+            pause: 4000,
+            enableDrag: false,
+            responsive: [{
+                breakpoint: 800,
+                settings: {
+                    item: 2
+                }
+            }, {
+                breakpoint: 600,
+                settings: {
+                    item: 1
+                }
+            }]
+        });
 
-    $("#locations").lightGallery({
-        download: false,
-        galleryId: 1
-    });
-    // $("#inbox").lightSlider({
-    //     item: 1,
-    //     cssEasing: 'ease-in',
-    //     loop: true,
-    //     auto: true,
-    //     pause: 7000,
-    //     pager: true,
-    // });
+        $("#locations, #locations2").lightGallery({
+            download: false,
+            galleryId: 1
+        });
+        // $("#inbox").lightSlider({
+        //     item: 1,
+        //     cssEasing: 'ease-in',
+        //     loop: true,
+        //     auto: true,
+        //     pause: 7000,
+        //     pager: true,
+        // });
+    })
     </script>
     <div id="modal_demo" class="modal_container modal_hidden">
         <form name="demo">
-            <div id="modal_demo_close" class="modal_close">x</div>
+            <div id="modal_demo_close" class="modal_close">+</div>
             <h1>Хотите познакомиться с Наурашей?</h1>
-            <input type="text" placeholder="Ваше имя" id="modal_demo_name" value="">
-            <input type="text" placeholder="Ваш E-mail" id="modal_demo_email" value="">
+            <p>Заполните форму и получите ссылку на демо-версию программы</p>
+            <input type="text" placeholder="Ваше имя" id="modal_demo_name">
+            <input type="text" placeholder="Ваш E-mail" id="modal_demo_email">
             <div class="modal_result modal_result_demo"></div>
             <div class="buttons">
-                <button class="button demo modal_send" id="modal_demo_send">Получить ссылку на демо-версию</button>
+                <button class="button demo modal_send" id="modal_demo_send">Получить ссылку</button>
             </div>
         </form>
     </div>
     <div id="modal_feed" class="modal_container modal_hidden">
         <form name="modal_feed">
-            <div id="modal_feed_close" class="modal_close">x</div>
+            <div id="modal_feed_close" class="modal_close">+</div>
             <h1>Есть вопросы?</h1>
             <p>Мы с радостью Вам поможем!</p>
-            <input type="text" placeholder="Ваш E-mail" id="modal_feed_email">
-            <input type="text" placeholder="Ваше Имя" id="modal_feed_name">
-            <textarea name="" id="" placeholder="Сообщение" id="modal_feed_message"></textarea>
+            <input type="text" placeholder="Ваш E-mail" id="modal_feed_email" required>
+            <input type="text" placeholder="Ваше Имя" id="modal_feed_name" required>
+            <textarea placeholder="Сообщение" id="modal_feed_message"></textarea>
             <div class="modal_result modal_result_feed"></div>
             <div class="buttons">
                 <button class="button demo modal_send" id="modal_feed_send">Отправить</button>
@@ -463,6 +464,5 @@
         </form>
     </div>
 </body>
-<script type="text/javascript" src="js/script.js"></script>
 
 </html>
