@@ -30,29 +30,32 @@
      width: 100%;
      display: flex;
      justify-content: center;
-     
+     align-items: center;
+         flex-direction: column;
  }
+ 
  .index .chunky {
-	margin: 2em;
+     margin: 2em;
  }
-
-  .chunky button {
-  	margin: 0 !important;
-  	padding: 0 !important;
-  	background-color: #ec1a26 !important;
-  	border: 0 !important;
-  }
+ 
+ .chunky button {
+     margin: 0 !important;
+     padding: 0 !important;
+     background-color: #ec1a26 !important;
+     border: 0 !important;
+ }
  
  .chunky a,
  .chunky button {
      /* Normal State */
+     display: block;
      padding: .5em 1em;
-     margin: 1em;
+     margin: 10px;
      width: auto;
      height: auto;
      color: #fff;
      font-family: Arial, Helvetica, sans-serif;
-     font-size: 2em;
+     font-size: 1.5em;
      font-weight: bold;
      font-style: normal;
      font-smoothing: antialiased;

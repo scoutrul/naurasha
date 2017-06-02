@@ -2,20 +2,28 @@ $(document).ready(function() {
 
 
     var $window = $(window);
-    $window.scroll(function() {
-        if ($window.scrollTop() <= countdown_offset - screen.height) {
-            $('.countdown').css({ visibility: 'hidden' });
+    //TIMER COUNTDOWN SHOW
+    var container_offset = $('.order-section').offset().top;
+    var countdown_offset = $('.countdown').offset().top;
+    var countainer_h = $('.order-section').height();
+    var countdown_h = $('#cta_countdown').height();
 
-        } else {
-            if ($window.scrollTop() < countdown_offset + countdown_h) {
-                $('.countdown').css({ visibility: 'visible' });
+    // $('.countdown').css({ visibility: 'hidden' });
 
-            } else {
-                $('.countdown').css({ visibility: 'hidden' });
+    // $window.scroll(function() {
+    //     if ($window.scrollTop() <= countdown_offset - screen.height) {
+    //         $('.countdown').css({ visibility: 'hidden' });
 
-            }
-        }
-    });
+    //     } else {
+    //         if ($window.scrollTop() < countdown_offset + countdown_h) {
+    //             $('.countdown').css({ visibility: 'visible' });
+
+    //         } else {
+    //             $('.countdown').css({ visibility: 'hidden' });
+
+    //         }
+    //     }
+    // });
 
     $(".header-order-button, #mainoffer-order-button").on('click', function() {
         $('body').animate({
@@ -26,13 +34,6 @@ $(document).ready(function() {
 
 
 
-    //TIMER COUNTDOWN SHOW
-    var container_offset = $('.order-section').offset().top;
-    var countdown_offset = $('.countdown').offset().top;
-    var countainer_h = $('.order-section').height();
-    var countdown_h = $('#cta_countdown').height();
-
-    $('.countdown').css({ visibility: 'hidden' });
 
 
     // MODAL
@@ -58,14 +59,15 @@ $(document).ready(function() {
             var demo_name = $("#modal_demo_name").val();
             if (modals.validate_email(demo_email) && demo_name !== '') {
                 let demo_data = 'demo_email=' + demo_email + '&demo_name=' + demo_name;
+                $(".modal_send").addClass('modal_button_hidden');
+                $(".modal_result_demo").text("Спасибо! Ссылка выслана на Ваш E-mail!").css("color", "green");
+
                 $.ajax({
                     type: "POST",
                     url: "mail_demo.php",
                     data: demo_data,
                     success: function() {
                         console.log('Success!');
-                        $(".modal_result_demo").text("Спасибо! Ссылка на установочный файл выслана!").css("color", "green");
-                        $(".modal_send").addClass('modal_button_hidden');
                     }
                 });
 
@@ -83,14 +85,15 @@ $(document).ready(function() {
         var feed_message = $("#modal_feed_message").val();
         if (modals.validate_email(feed_email) && feed_name !== '' && feed_message !== '') {
             let feed_data = 'feed_email=' + feed_email + '&feed_name=' + feed_name + '&feed_message=' + feed_message;
+            $(".modal_send").addClass('modal_button_hidden');
+            $(".modal_result_feed").text("Спасибо за обращение! В ближайшее время (в будни с 10 до 18) наш менеджер свяжется с Вами.").css("color", "green");
+
             $.ajax({
                 type: "POST",
                 url: "mail_feed.php",
                 data: feed_data,
                 success: function() {
                     console.log('Success!');
-                    $(".modal_result_feed").text("Спасибо за обращение! В ближайшее время (в будни с 10 до 18) наш менеджер свяжется с Вами.").css("color", "green");
-                    $(".modal_send").addClass('modal_button_hidden');
                 }
             });
         } else {
@@ -105,21 +108,23 @@ $(document).ready(function() {
         var order_name = $("#order_name").val();
         var order_message = $("#order_message").val();
         var order_phone = $("#order_phone").val();
-        if (modals.validate_email(order_email) || order_phone !== '') {
-            let order_data = 'order_email=' + order_email + '&order_name=' + order_name + '&order_message=' + order_message + '&order_phone=' + order_phone;
+        if (modals.validate_email(order_email)) {
+            let phone = (order_phone !== '') ? '&order_phone=' + order_phone : '';
+            let order_data = 'order_email=' + order_email + '&order_name=' + order_name + '&order_message=' + order_message + phone;
+            $(".order_result").text("Спасибо за заказ! В ближайшее время (в будни с 10 до 18) наш менеджер свяжется с Вами.").css("color", "#fff236");
+            $("#modal_order_send").hide();
             $.ajax({
                 type: "POST",
                 url: "mail_order.php",
                 data: order_data,
                 success: function() {
                     console.log('Success!');
-                    $(".order_result").text("Спасибо за заказ! В ближайшее время (в будни с 10 до 18) наш менеджер свяжется с Вами.").css("color", "#fff236");
-                    $("#modal_order_send").hide();
+
                 }
             });
         } else {
             modals.error();
-            $(".order_result").text("Пожалуйста, введите E-mail или номер телефона.").css("color", "white");
+            $(".order_result").text("Пожалуйста, введите номер телефона.").css("color", "white");
         }
         return false;
     });
