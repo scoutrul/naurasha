@@ -88,3 +88,92 @@
 .glide--slideshow .glide__slide.active {
   z-index: 1;
 }
+
+
+
+
+#Glide_whatinside .glide__wrapper {
+    overflow: visible !important;
+}
+
+.glide {
+    min-height: 490px;
+}
+
+.glide__slide:active {
+    cursor: col-resize;
+}
+
+.glide__arrow {
+    max-width: 35px;
+    max-height: 35px;
+    padding: 10px;
+    float: none !important;
+    opacity: .7;
+}
+
+.glide__arrow:hover {
+    opacity: 1;
+}
+
+.glide__slide img {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.glide__arrows {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    z-index: 1000;
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.glide--carousel .glide__slide {
+    text-align: center;
+}
+
+.glide__wrapper {
+    position: relative;
+}
+
+.glide__bullets {
+    text-align: center;
+}
+
+.glide__bullets button {
+    padding: 5px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #eaeaea;
+}
+
+.glide__bullets button:active {
+    box-shadow: none !important;
+}
+
+.glide__bullets button.active {
+    background: #e14e2d;
+}
+
+
+#Glide_testimon .glide__arrows {
+    top: 70px;
+    left: 0%;
+    justify-content: space-around;
+    z-index: 9
+}
+
+#Glide_testimon .glide__arrow {
+    background: #5ba5d9;
+}
+
+#Glide_testimon .item {
+    max-width: 520px;
+    margin: auto;
+}

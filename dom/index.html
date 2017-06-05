@@ -3,397 +3,398 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0">
     <title>Наураша в стране Наурандии</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/lightgallery/1.3.9/js/lightgallery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css">
     <link rel="stylesheet" href="css/glide.core.css">
-    <script type="text/javascript" src="js/script.js"></script>
     <script src="js/glide.min.js"></script>
 </head>
 
 <body>
     <header class="header header_sticky">
-        <div class="container flexrow ">
+        <div class="container">
             <div class="logo"></div>
             <div class="phone">
                 <div class="number">+7(495) 766-24-23</div>
-                <div class="hot"></div>
             </div>
-            <a class="button_red header-order-button" id="header-order-button">
+            <button class="button_red" id="header-order-button">
                 Заказать
-            </a>
+            </button>
         </div>
     </header>
-    <!--  -->
-    <section class="mainoffer mainoffer-bg box-bg">
-        <div class="container flexrow">
-            <div class="left"><img src="images/hello_naurasha.png" alt="Детская цифровая лаборатория Наураша"></div>
-            <div class="right">
-                <div class="logo">
-                    <img src="images/logo_naurasha.png" alt="Наураша в стране Наурандии">
-                </div>
-                <h1 class="text withshadow">
+
+    <div id="body">
+        <section class="mainoffer mainoffer-bg box-bg">
+            <div class="container flexrow">
+                <div class="left"><img src="images/hello_naurasha.png" alt="Детская цифровая лаборатория Наураша"></div>
+                <div class="right">
+                    <div class="logo">
+                        <img src="images/logo_naurasha.png" alt="Наураша в стране Наурандии">
+                    </div>
+                    <h1 class="text withshadow">
                     Почему мороженое холодное? Откуда ток в батарейке? Почему горит лампочка? Что такое звук?
                     <div><span>Не знаете, как ответить ребенку на все эти вопросы?</span></div>
                     Наша лаборатория в игровой форме поможет разъяснить сложные физические и природные явления.
                 </h1>
-                <div class="buttons">
-                    <button class="button order" id="mainoffer-order-button" style="margin-right: 5px">
-                        <div class="title">Купить
-                            <br>лабораторию</div>
-                        <div class="price">
-                            <div>5,990 руб.</div>
-                        </div>
-                    </button>
-                    <button class="button demo" id="mainoffer-demo-button">
-                        <div class="title">Демо
-                            <br>ролик</div>
-                        <div class="price">
-                            <div>бесплатно</div>
-                        </div>
-                    </button>
+                    <div class="buttons">
+                        <button class="button order" id="mainoffer-order-button" style="margin-right: 5px">
+                            <div class="title">Купить
+                                <br>лабораторию</div>
+                            <div class="price">
+                                <div>5,990 руб.</div>
+                            </div>
+                        </button>
+                        <button class="button demo" id="mainoffer-demo-button">
+                            <div class="title">Демо
+                                <br>ролик</div>
+                            <div class="price">
+                                <div>бесплатно</div>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
-    </section>
-    <!--  -->
-    <section class="aboutit">
-        <div class="container">
-            <h1>"Наураша в стране Наурандии" - это: </h1>
-            <ul class="list flexrow">
-                <li>
-                    <img src="images/icons/about_4.png" alt="Научные эксперименты с настоящим датчиком у вас дома">
-                    <h4>Научные<br>эксперименты<br>с настоящим датчиком </h4>
-                    <div class="text">4 темы для изучения, более 50 опытов + свободный режим, который дает бесконечные возможности для экспериментирования</div>
-                </li>
-                <li>
-                    <img src="images/icons/about_2.png" alt="Новый формат изучения окружающего мира">
-                    <h4>Новый <br>формат изучения<br> окружающего мира</h4>
-                    <div class="text">Ребёнок проводит эксперименты не в виртуальном пространстве, а руками, в режиме реального времени</div>
-                </li>
-                <li>
-                    <img src="images/icons/about_3.png" alt="Воспитание любознательности у ребенка">
-                    <h4>Воспитание любознательности<br> у ребенка</h4>
-                    <div class="text">Изучение сути физических явлений уже в 5-8 лет – намного раньше, чем это предполагается в школьной программе</div>
-                </li>
-                <li>
-                    <img src="images/icons/about_1.png" alt="Первая в мире цифровая лаборатория для детей от 5 лет">
-                    <h4>Первая в мире<br>цифровая лаборатория<br>для детей от 5 лет</h4>
-                    <div class="text">Отечественная разработка, получившая признание на международных выставках. Создана профессиональной командой с привлечением детских психологов и методистов</div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--  -->
-    <section class="howitworks howitworks-bg box-bg withshadow">
-        <div class="container flexwrap">
-            <h1>Изучение четырёх физических явлений, для каждого из которых создана отдельная лаборатория!</h1>
-            <ul id="locations" class="list">
-                <li data-src="images/locations/game_light.jpg">
-                    <div class="header_icon">
-                        <div class="img">
-                            <img src="images/icons/lab_light.png" alt="Свет">
-                            <h4>Свет</h4>
-                        </div>
-                        <div class="pic">
-                            <img src="images/locations/game_light_thumb.jpg" alt="Лаборатория Наураша Свет">
-                        </div>
-                    </div>
-                </li>
-                <li data-src="images/locations/game_electro.jpg">
-                    <div class="header_icon">
-                        <div class="img">
-                            <img src="images/icons/lab_electro.png" alt="Электричество">
-                            <h4>Электричество</h4>
-                        </div>
-                        <div class="pic">
-                            <img src="images/locations/game_electro_thumb.jpg" alt="Лаборатория Наураша Электричество">
-                        </div>
-                    </div>
-                </li>
-                <li data-src="images/locations/game_sound.jpg">
-                    <div class="header_icon">
-                        <div class="img">
-                            <img src="images/icons/lab_sound.png" alt="Звук">
-                            <h4>Звук</h4>
-                        </div>
-                        <div class="pic">
-                            <img src="images/locations/game_sound_thumb.jpg" alt="Лаборатория Наураша Звук">
-                        </div>
-                    </div>
-                </li>
-                <li data-src="images/locations/game_tempo.jpg">
-                    <div class="header_icon">
-                        <div class="img">
-                            <img src="images/icons/lab_tempo.png" alt="Температура">
-                            <h4>Температура</h4>
-                        </div>
-                        <div class="pic">
-                            <img src="images/locations/game_tempo_thumb.jpg" alt="Лаборатория Наураша Температура">
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <div class="text">
-                Внутри каждой коробки - набор научных экспериментов. Вместе с <span>мультяшным героем, мальчиком Наурашей</span>, ребенок совершит захватывающее путешествие в удивительную страну Наурандию. Наураша расскажет маленькому испытателю об окружающем мире и поможет провести опыты.
+        </section>
+        <!-- /body -->
+        <!--  -->
+        <!--  -->
+        <section class="aboutit">
+            <div class="container">
+                <h1>"Наураша в стране Наурандии" - это: </h1>
+                <ul class="list flexrow">
+                    <li>
+                        <img src="images/icons/about_4.png" alt="Научные эксперименты с настоящим датчиком у вас дома">
+                        <h4>Научные<br>эксперименты<br>с настоящим датчиком </h4>
+                        <div class="text">4 темы для изучения, более 50 опытов + свободный режим, который дает бесконечные возможности для экспериментирования</div>
+                    </li>
+                    <li>
+                        <img src="images/icons/about_2.png" alt="Новый формат изучения окружающего мира">
+                        <h4>Новый <br>формат изучения<br>окружающего мира</h4>
+                        <div class="text">Ребёнок проводит эксперименты не в виртуальном пространстве, а руками, в режиме реального времени</div>
+                    </li>
+                    <li>
+                        <img src="images/icons/about_3.png" alt="Воспитание любознательности у ребенка">
+                        <h4>Воспитание<br>любознательности<br>у ребенка</h4>
+                        <div class="text">Изучение сути физических явлений уже в 5-8 лет – намного раньше, чем это предполагается в школьной программе</div>
+                    </li>
+                    <li>
+                        <img src="images/icons/about_1.png" alt="Первая в мире цифровая лаборатория для детей от 5 лет">
+                        <h4>Первая в мире<br>цифровая лаборатория<br>для детей от 5 лет</h4>
+                        <div class="text">Отечественная разработка, получившая признание на международных выставках. Создана профессиональной командой с привлечением детских психологов и методистов</div>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <script>
-        $(document).ready(function() {
-
-            $("#locations").lightGallery({
-                download: false,
-                galleryId: 1,
-                controls: false
-            });
-
-        })
-        </script>
-    </section>
-    <!--  -->
-    <!--  -->
-    <section class="whatinside">
-        <div class="container">
-            <h1>Что вы найдете в коробке</h1>
-            <div id="Glide_whatinside" class="glide">
-                <div class="glide__arrows">
-                    <button class="glide__arrow prev button_red" data-glide-dir="<" style="float:right">
-                        <</button>
-                            <button class="glide__arrow next button_red" data-glide-dir=">">></button>
-                </div>
-                <div class="glide__wrapper">
-                    <ul class="glide__track">
-                        <li class="glide__slide">
-                            <img src="images/photos/box1.jpg" alt="Коробка Наураша снаружи">
-                            <h4>Много часов<br>захватывающих экспериментов<br>для вашего ребенка</h4>
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/box2.jpg" alt="Коробка Наураша  внутри">
-                            <h4>Различные предметы<br>для проведения экспериментов<br>и уникальное программное обеспечение</h4>
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/kvest.jpg" alt="Квест Наураша">
-                            <h4>Увлекательный образовательный квест</h4>
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/box0.jpg" alt="Датчик Божья Коровка Наураша">
-                            <h4>Датчик в виде Божьей Коровки<br>Наш датчик особенный:<br>
-                            он содержит 4 сенсора и измеряет<br> температуру, напряжение,<br>громкость звука и освещённость</h4>
-                        </li>
-                    </ul>
+        </section>
+        <!--  -->
+        <section class="howitworks howitworks-bg box-bg withshadow">
+            <div class="container flexwrap">
+                <h1>Изучение четырёх физических явлений, для каждого из которых создана отдельная лаборатория!</h1>
+                <ul id="locations" class="list">
+                    <li data-src="images/locations/game_light.jpg">
+                        <div class="header_icon">
+                            <div class="img">
+                                <img src="images/icons/lab_light.png" alt="Свет">
+                                <h4>Свет</h4>
+                            </div>
+                            <div class="pic">
+                                <img src="images/locations/game_light_thumb.jpg" alt="Лаборатория Наураша Свет">
+                            </div>
+                        </div>
+                    </li>
+                    <li data-src="images/locations/game_electro.jpg">
+                        <div class="header_icon">
+                            <div class="img">
+                                <img src="images/icons/lab_electro.png" alt="Электричество">
+                                <h4>Электричество</h4>
+                            </div>
+                            <div class="pic">
+                                <img src="images/locations/game_electro_thumb.jpg" alt="Лаборатория Наураша Электричество">
+                            </div>
+                        </div>
+                    </li>
+                    <li data-src="images/locations/game_sound.jpg">
+                        <div class="header_icon">
+                            <div class="img">
+                                <img src="images/icons/lab_sound.png" alt="Звук">
+                                <h4>Звук</h4>
+                            </div>
+                            <div class="pic">
+                                <img src="images/locations/game_sound_thumb.jpg" alt="Лаборатория Наураша Звук">
+                            </div>
+                        </div>
+                    </li>
+                    <li data-src="images/locations/game_tempo.jpg">
+                        <div class="header_icon">
+                            <div class="img">
+                                <img src="images/icons/lab_tempo.png" alt="Температура">
+                                <h4>Температура</h4>
+                            </div>
+                            <div class="pic">
+                                <img src="images/locations/game_tempo_thumb.jpg" alt="Лаборатория Наураша Температура">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="text">
+                    Внутри каждой коробки - набор научных экспериментов. Вместе с <span>мультяшным героем, мальчиком Наурашей</span>, ребенок совершит захватывающее путешествие в удивительную страну Наурандию. Наураша расскажет маленькому испытателю об окружающем мире и поможет провести опыты.
                 </div>
             </div>
-            <!-- 
-             -->
             <script>
-            $("#Glide_whatinside").glide({
-                type: "carousel"
-            });
+            $(document).ready(function() {
+
+                $("#locations").lightGallery({
+                    download: false,
+                    galleryId: 1,
+                    controls: false
+                });
+
+            })
             </script>
-        </div>
-    </section>
-    <!-- 
-     -->
-    <!--  -->
-    <!--  -->
-    <section class="systemreq systemreq-bg box-bg withshadow">
-        <div class="container">
-            <h1>Системные требования:</h1>
-            <ul class="list">
-                <li><span>Операционная система:</span> Windows 8;</li>
-                <li><span>Процессор:</span> Intel Core i3 3ГГц;</li>
-                <li><span>Память:</span> 4096 Мб;</li>
-                <li><span>Видео-карта:</span> с ОЗУ 512 Мб, разрешение экрана 1920*1080;</li>
-                <li><span>Аудио-карта:</span> совместимая с DirectX;</li>
-                <li><span>Жесткий диск:</span> 2 Гб свободного места;</li>
-                <li>DirectX 9.0c, Net Framework 3.5;</li>
-                <li><span>Перед авторизацией второго устройства по Вашему ID, пожалуйста, подождите 60 минут</span>.</li>
-            </ul>
-        </div>
-    </section>
-    <!--  -->
-    <section class="seporator">
-        <img src="images/seporator.png">
-    </section>
-    <!--  -->
-    <section class="reviews">
-        <div class="container">
-            <h1>Отзывы</h1>
-            <div id="Glide_testimon" class="glide testimon">
-                <div class="glide__wrapper">
+        </section>
+        <!--  -->
+        <!--  -->
+        <section class="whatinside">
+            <div class="container">
+                <h1>Что вы найдете в коробке</h1>
+                <div id="Glide_whatinside" class="glide">
                     <div class="glide__arrows">
                         <button class="glide__arrow prev button_red" data-glide-dir="<" style="float:right">
                             <</button>
                                 <button class="glide__arrow next button_red" data-glide-dir=">">></button>
                     </div>
-                    <ul class="glide__track">
-                        <li class="glide__slide">
-                            <div class="item">
-                                <div class="img">
-                                    <img src="images/photos/otzyv_kruk.jpg" alt=""></div>
-                                <div class="name">Крюкова Елена Борисовна
-                                    <br>
-                                    <span>бабушка 2 внуков (5 и 7 лет)</span></div>
-                                <div class="text">Теперь мои внуки умеют определять температуру воды, воздуха, тела человека, знают, как ухаживать за растениями, как создать им хорошие условия. Впервые узнали о правилах безопасности при проведении научных экспериментов, а ведь это так важно! Опыты с лабораторией ученого Наураши приоткрыли нам дверь в мир физики, химии и биологии уже в дошкольном возрасте! Такое раннее научное развитие значительно расширило кругозор моих внуков-непосед, и они открыли в себе настоящих исследователей. На день рождения старшего уже выбрали микроскоп 3D из ассортимента «Научных развлечений».</div>
-                            </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div class="item">
-                                <div class="img">
-                                    <img src="images/photos/otzyv_asmol.jpg" alt=""></div>
-                                <div class="name">Тимофей и Катерина Асмоловы
-                                    <br>
-                                    <span>4 детей</span>
-                                </div>
-                                <div class="text">С лабораторией «Наураша в стране Наурандии» я познакомилась в лагере "Бебикэмп", где уже 2 года проводятся целые смены по лаборатории для юных исследователей. </div>
-                                <div class="text">Каково было мое удивление, когда дети не хотели уходить с занятий и перенесли опыты с датчиком «Божья коровка» за пределы группы! Измеряли температуру почвы и ручьев, проводили бесконечные эксперименты со звуком. По окончанию смены ребята не хотели уезжать! Наураша – настоящая прививка от компьютерной и телевизионной зависимости!</div>
-                            </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div class="item">
-                                <div class="img">
-                                    <img src="images/photos/otzyv_midova.jpg" alt=""></div>
-                                <div class="name">Мидова Ася
-                                    <br>
-                                    <span>мама двух очаровательных дочек</span></div>
-                                <div class="text">Получить электричество из фруктов - это ли не чудо?! Хорошо, что ученый Наураша всегда объяснял, что нужно делать, и помогал сделать выводы. Вся наша семья участвовала в игре и с удовольствием придумывала новые эксперименты и дома, и на улице!</div>
-                            </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div class="item">
-                                <div class="img">
-                                    <img src="images/photos/otzyv_knish.jpg" alt=""></div>
-                                <div class="name">Кныш Анна
-                                    <br>
-                                    <span>сын 7 лет</span></div>
-                                <div class="text">Сначала пришлось часть заданий выполнять самой, а сын повторял. Но когда мы разобрались со всеми настройками и датчиком, сын с легкостью выполнял все научные опыты сам, а помогал ему интерактивный герой Наураша. Особенно нам понравились опыты с измерением силы звука (свистеть в свисток, играть на ксилофоне) и электричеством (зажигать лампочку).</div>
-                            </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div class="item">
-                                <div class="img">
-                                    <img src="images/photos/otzyv_kul.jpg" alt=""></div>
-                                <div class="name">Кульчицкая Наталья
-                                    <br>
-                                    <span>двое детей 11 и 13 лет</span></div>
-                                <div class="text">Хоть мои мальчишки, в силу возраста, были знакомы со многими темами из лаборатории, но мы по-семейному и научно провели время с датчиком «Божья коровка»! Наураша наглядно показал суть физических явлений, и мой младший сын очень заинтересовался созданием электрической цепи, а также попросил купить ему следующий по сложности образовательный набор... Уже несколько вечеров подряд он проводит с набором «Юный физик. Электричество». Благодаря Наураше сыновья заинтересовались физикой и биологией, хотя раньше я и мечтать об этом не могла!</div>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="glide__wrapper">
+                        <ul class="glide__track">
+                            <li class="glide__slide">
+                                <img src="images/photos/box1.jpg" alt="Коробка Наураша снаружи">
+                                <h4>Много часов<br>захватывающих экспериментов<br>для вашего ребенка</h4>
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/box2.jpg" alt="Коробка Наураша  внутри">
+                                <h4>Различные предметы<br>для проведения экспериментов<br>и уникальное программное обеспечение</h4>
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/kvest.jpg" alt="Квест Наураша">
+                                <h4>Увлекательный образовательный квест</h4>
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/box0.jpg" alt="Датчик Божья Коровка Наураша">
+                                <h4>Датчик в виде Божьей Коровки<br>Наш датчик особенный:<br>
+                            он содержит 4 сенсора и измеряет<br> температуру, напряжение,<br>громкость звука и освещённость</h4>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                <!-- 
+             -->
+                <script>
+                $("#Glide_whatinside").glide({
+                    type: "carousel"
+                });
+                </script>
             </div>
-            <script>
-            $("#Glide_testimon").glide({
-                type: "carousel",
-                autoplay: false,
-                dragDistance: 300
-            });
-            </script>
-        </div>
-    </section>
-    <!--  -->
-    <!--  -->
-    <section class="photogallery">
-        <div class="container">
-            <h1>Фотогалерея</h1>
-            <div id="Glide_photogallery" class="glide">
-                <div class="glide__wrapper">
-                    <ul class="glide__track">
-                        <li class="glide__slide">
-                            <img src="images/photos/photo_8.jpg" alt="">
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/photo_9.jpg" alt="">
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/photo_10.jpg" alt="">
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/photo_11.jpg" alt="">
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/photo_1.jpg" alt="">
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/photo_2.jpg" alt="">
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/photo_3.jpg" alt="">
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/photo_7.jpg" alt="">
-                        </li>
-                        <li class="glide__slide">
-                            <img src="images/photos/photo_6.jpg" alt="">
-                        </li>
-                    </ul>
-                </div>
-                <div class="glide__bullets"></div>
-            </div>
-            <script>
-            $("#Glide_photogallery").glide({
-                type: "carousel"
-            });
-            </script>
-        </div>
-    </section>
-    <!-- 
+        </section>
+        <!-- 
      -->
-    <section class="order-section order-bg box-bg flexrow">
-        <div class="container flexrow flexwrap">
+        <!--  -->
+        <!--  -->
+        <section class="systemreq systemreq-bg box-bg withshadow">
+            <div class="container">
+                <h1>Системные требования:</h1>
+                <ul class="list">
+                    <li><span>Операционная система:</span> Windows 8;</li>
+                    <li><span>Процессор:</span> Intel Core i3 3ГГц;</li>
+                    <li><span>Память:</span> 4096 Мб;</li>
+                    <li><span>Видео-карта:</span> с ОЗУ 512 Мб, разрешение экрана 1920*1080;</li>
+                    <li><span>Аудио-карта:</span> совместимая с DirectX;</li>
+                    <li><span>Жесткий диск:</span> 2 Гб свободного места;</li>
+                    <li>DirectX 9.0c, Net Framework 3.5;</li>
+                    <li><span>Перед авторизацией второго устройства по Вашему ID, пожалуйста, подождите 60 минут.</span></li>
+                </ul>
+            </div>
+        </section>
+        <!--  -->
+        <!--  -->
+        <section class="reviews">
+            <div class="container">
+                <h1>Отзывы</h1>
+                <div id="Glide_testimon" class="glide testimon">
+                    <div class="glide__wrapper">
+                        <div class="glide__arrows">
+                            <button class="glide__arrow prev button_red" data-glide-dir="<" style="float:right">
+                                <</button>
+                                    <button class="glide__arrow next button_red" data-glide-dir=">">></button>
+                        </div>
+                        <ul class="glide__track">
+                            <li class="glide__slide">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="images/photos/otzyv_kruk.jpg" alt=""></div>
+                                    <div class="name">Крюкова Елена Борисовна
+                                        <br>
+                                        <span>бабушка 2 внуков (5 и 7 лет)</span></div>
+                                    <div class="text">Теперь мои внуки умеют определять температуру воды, воздуха, тела человека, знают, как ухаживать за растениями, как создать им хорошие условия. Впервые узнали о правилах безопасности при проведении научных экспериментов, а ведь это так важно! Опыты с лабораторией ученого Наураши приоткрыли нам дверь в мир физики, химии и биологии уже в дошкольном возрасте! Такое раннее научное развитие значительно расширило кругозор моих внуков-непосед, и они открыли в себе настоящих исследователей. На день рождения старшего уже выбрали микроскоп 3D из ассортимента «Научных развлечений».</div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="images/photos/otzyv_asmol.jpg" alt=""></div>
+                                    <div class="name">Тимофей и Катерина Асмоловы
+                                        <br>
+                                        <span>4 детей</span>
+                                    </div>
+                                    <div class="text">С лабораторией «Наураша в стране Наурандии» я познакомилась в лагере "Бебикэмп", где уже 2 года проводятся целые смены по лаборатории для юных исследователей. </div>
+                                    <div class="text">Каково было мое удивление, когда дети не хотели уходить с занятий и перенесли опыты с датчиком «Божья коровка» за пределы группы! Измеряли температуру почвы и ручьев, проводили бесконечные эксперименты со звуком. По окончанию смены ребята не хотели уезжать! Наураша – настоящая прививка от компьютерной и телевизионной зависимости!</div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="images/photos/otzyv_midova.jpg" alt=""></div>
+                                    <div class="name">Мидова Ася
+                                        <br>
+                                        <span>мама двух очаровательных дочек</span></div>
+                                    <div class="text">Получить электричество из фруктов - это ли не чудо?! Хорошо, что ученый Наураша всегда объяснял, что нужно делать, и помогал сделать выводы. Вся наша семья участвовала в игре и с удовольствием придумывала новые эксперименты и дома, и на улице!</div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="images/photos/otzyv_knish.jpg" alt=""></div>
+                                    <div class="name">Кныш Анна
+                                        <br>
+                                        <span>сын 7 лет</span></div>
+                                    <div class="text">Сначала пришлось часть заданий выполнять самой, а сын повторял. Но когда мы разобрались со всеми настройками и датчиком, сын с легкостью выполнял все научные опыты сам, а помогал ему интерактивный герой Наураша. Особенно нам понравились опыты с измерением силы звука (свистеть в свисток, играть на ксилофоне) и электричеством (зажигать лампочку).</div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="images/photos/otzyv_kul.jpg" alt=""></div>
+                                    <div class="name">Кульчицкая Наталья
+                                        <br>
+                                        <span>двое детей 11 и 13 лет</span></div>
+                                    <div class="text">Хоть мои мальчишки, в силу возраста, были знакомы со многими темами из лаборатории, но мы по-семейному и научно провели время с датчиком «Божья коровка»! Наураша наглядно показал суть физических явлений, и мой младший сын очень заинтересовался созданием электрической цепи, а также попросил купить ему следующий по сложности образовательный набор... Уже несколько вечеров подряд он проводит с набором «Юный физик. Электричество». Благодаря Наураше сыновья заинтересовались физикой и биологией, хотя раньше я и мечтать об этом не могла!</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+                $("#Glide_testimon").glide({
+                    type: "carousel",
+                    autoplay: false,
+                    dragDistance: 300
+                });
+                </script>
+            </div>
+        </section>
+        <!--  -->
+        <!--  -->
+        <section class="photogallery">
+            <div class="container">
+                <h1>Фотогалерея</h1>
+                <div id="Glide_photogallery" class="glide">
+                    <div class="glide__wrapper">
+                        <ul class="glide__track">
+                            <li class="glide__slide">
+                                <img src="images/photos/photo_8.jpg" alt="">
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/photo_9.jpg" alt="">
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/photo_10.jpg" alt="">
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/photo_11.jpg" alt="">
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/photo_1.jpg" alt="">
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/photo_2.jpg" alt="">
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/photo_3.jpg" alt="">
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/photo_7.jpg" alt="">
+                            </li>
+                            <li class="glide__slide">
+                                <img src="images/photos/photo_6.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glide__bullets"></div>
+                </div>
+                <script>
+                $("#Glide_photogallery").glide({
+                    type: "carousel"
+                });
+                </script>
+            </div>
+        </section>
+        <!-- 
+     -->
+        <section class="order-section order-bg box-bg">
             <h2 id="order_anchor"><span>Закажите лабораторию</span><br> "Наураша в стране Наурандии"<span><br>со скидкой!</span>
             </h2>
-            <div class="left">
-                <div class="countdown" id="cta_countdown">
-                    <div class="actition">Окончание акции:</div>
-                    <script type="text/javascript" src="js/CountDownJS.js"></script>
-                    <script>
-                    countDown1 = new CountDownObject();
-                    countDown1.TIME_ZONE = +3,
-                        countDown1.SET_YOUR_SEC = 0,
-                        countDown1.SET_YOUR_MIN = 0,
-                        countDown1.SET_YOUR_HOUR = 0,
-                        countDown1.SET_YOUR_DAY = 05,
-                        countDown1.SET_YOUR_MONTH = 06,
-                        countDown1.SET_YOUR_YEAR = 2017,
-                        countDown1.NUM_OF_ELEMENTS = 8,
-                        countDown1.TIME_ANIMATION = 300,
-                        countDown1.BACK_COLOR = "#325",
-                        countDown1.DIGITS_COLOR = "#fdfefd",
-                        countDown1.TEXT_COLOR = "#fdfefd",
-                        countDown1.IS_DYNAMIC_COLOR = false,
+            <div class="container">
+                <div class="left">
+                    <div class="countdown" id="cta_countdown">
+                        <div class="actition">Окончание акции:</div>
+                        <script type="text/javascript" src="js/CountDownJS.js"></script>
+                        <script>
+                        countDown1 = new CountDownObject();
+                        countDown1.TIME_ZONE = +3;
+                        countDown1.SET_YOUR_SEC = 0;
+                        countDown1.SET_YOUR_MIN = 0;
+                        countDown1.SET_YOUR_HOUR = 0;
+                        countDown1.SET_YOUR_DAY = 07;
+                        countDown1.SET_YOUR_MONTH = 06;
+                        countDown1.SET_YOUR_YEAR = 2017;
+                        countDown1.NUM_OF_ELEMENTS = 7;
+                        countDown1.TIME_ANIMATION = 1000;
+                        countDown1.BACK_COLOR = "#325";
+                        countDown1.DIGITS_COLOR = "#fdfefd";
+                        countDown1.TEXT_COLOR = "#fdfefd";
+                        countDown1.IS_DYNAMIC_COLOR = false;
                         countDown1.CANVAS_NAME = "CountDownCanvas";
-                    countDown1.Start();
-                    </script>
+                        countDown1.Start();
+                        </script>
+                    </div>
+                    <div class="img">
+                    </div>
                 </div>
-                <div class="img">
+                <div class="right">
+                    <sup>Заполните короткую форму, и наш менеджер свяжется с Вами</sup>
+                    <form>
+                        <input type="text" placeholder="Имя" id="order_name">
+                        <input type="text" placeholder="E-mail" id="order_email">
+                        <input type="text" placeholder="Телефон" id="order_phone">
+                        <textarea id="order_message" cols="30" rows="2" placeholder="Комментарий"></textarea>
+                        <div class="order_result"></div>
+                        <button class="button demo" id="modal_order_send">
+                            <div class="title">Заказать</div>
+                            <div class="price">
+                                <div><strike>6,990р</strike></div>
+                                <div>5,990р</div>
+                            </div>
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="right">
-                <sup>Заполните короткую форму, и наш менеджер свяжется с Вами</sup>
-                <form>
-                    <input type="text" placeholder="Имя" id="order_name">
-                    <input type="text" placeholder="E-mail" id="order_email">
-                    <input type="text" placeholder="Телефон" id="order_phone">
-                    <textarea id="order_message" cols="30" rows="2" placeholder="Комментарий"></textarea>
-                    <div class="order_result"></div>
-                    <button class="button demo" id="modal_order_send">
-                        <div class="title">Заказать</div>
-                        <div class="price">
-                            <div><strike>6,990р</strike></div>
-                            <div>5,990р</div>
-                        </div>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-    <!--  -->
+        </section>
+        <!--  -->
+    </div>
     <!--  -->
     <footer class="footer-bg">
-        <div class="container flexrow flexwrap">
+        <div class="container">
             <div class="left">
                 <button class="button order" id="modal_feed_open">
                     <div class="title">Есть вопросы</div>
@@ -416,9 +417,11 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="container">
             <ul class="list copyright">
                 <li>
-                    <div>Горячая линия: 
+                    <div>Горячая линия:
                         <nobr><strong>+7(495) 766-24-23</strong></nobr>
                     </div>
                 </li>
@@ -458,6 +461,41 @@
             </div>
         </form>
     </div>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function(d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter44865346 = new Ya.Metrika({
+                    id: 44865346,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true
+                });
+            } catch (e) {}
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function() {
+                n.parentNode.insertBefore(s, n);
+            };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/44865346" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 
 </html>
