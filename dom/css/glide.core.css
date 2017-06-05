@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  padding: 20px 0;
 }
 .glide__wrapper {
   overflow: hidden;
@@ -126,6 +127,7 @@
     display: flex;
     display: -webkit-flex;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
     position: absolute;
     top: 200px;
     width: 100%;
@@ -164,9 +166,8 @@
 
 #Glide_testimon .glide__arrows {
     top: 70px;
-    left: 0%;
-    justify-content: space-around;
-    z-index: 9
+    left: 0;
+
 }
 
 #Glide_testimon .glide__arrow {

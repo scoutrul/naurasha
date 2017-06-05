@@ -953,7 +953,7 @@ footer .button > div {
     position: fixed;
     top: 0;
     left: 0;
-    min-width: 100vw;
+    min-width: 90vw;
     min-height: 100vh;
     width: 100%;
     height: 100%;
@@ -961,7 +961,7 @@ footer .button > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+
 }
 
 .modal_hidden {
@@ -995,11 +995,12 @@ footer .button > div {
 
 .modal_container input,
 .modal_container textarea {
-    margin: 1em;
+    margin: 10px auto;
     padding: 10px;
     border: 0;
     border-radius: 3px;
-    background-color: rgb(234, 238, 240);
+    background-color: rgb(244, 247, 247);
+    width: 100%;
 }
 
 .modal_container form button {
@@ -1078,6 +1079,7 @@ footer .button > div {
     .whatinside .container .glide {
         min-height: 350px;
     }
+
 }
 
 
