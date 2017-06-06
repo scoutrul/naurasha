@@ -344,7 +344,7 @@
             <div class="container">
                 <div class="left">
                     <div class="countdown" id="cta_countdown">
-                        <div class="actition">Окончание акции:</div>
+                        
                         <script type="text/javascript" src="js/CountDownJS.js"></script>
                         <script>
                         countDown1 = new CountDownObject();
@@ -432,8 +432,8 @@
             <div id="modal_demo_close" class="modal_close">+</div>
             <h1>Хотите познакомиться с Наурашей?</h1>
             <p>Заполните форму и получите ссылку на демо-ролик программы</p>
-            <input type="text" placeholder="Ваше имя" id="modal_demo_name">
-            <input type="text" placeholder="Ваш E-mail" id="modal_demo_email">
+            <input type="text" placeholder="Ваше имя" id="modal_demo_name" autofocus>
+            <input type="text" placeholder="Ваш E-mail" id="modal_demo_email" required>
             <div class="modal_result modal_result_demo"></div>
             <div class="buttons">
                 <button class="button demo modal_send" id="modal_demo_send">
@@ -447,9 +447,9 @@
             <div id="modal_feed_close" class="modal_close">+</div>
             <h1>Есть вопросы?</h1>
             <p>Мы с радостью Вам поможем!</p>
-            <input type="text" placeholder="Ваш E-mail" id="modal_feed_email" required>
-            <input type="text" placeholder="Ваше Имя" id="modal_feed_name" required>
-            <textarea placeholder="Сообщение" id="modal_feed_message"></textarea>
+            <input type="text" placeholder="Ваш E-mail" id="modal_feed_email" required autofocus>
+            <input type="text" placeholder="Ваше Имя" id="modal_feed_name">
+            <textarea placeholder="Сообщение" id="modal_feed_message" required></textarea>
             <div class="modal_result modal_result_feed"></div>
             <div class="buttons">
                 <button class="button demo modal_send" id="modal_feed_send">

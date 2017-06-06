@@ -1201,7 +1201,8 @@ function CountDownObject() {
 
         // add canvases to Html
         // document.write('<div style="top: 0px;">');
-        document.write('<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" id="ResizingImage' + this.CANVAS_NAME + '" width="100%" height="1"></img>');
+        document.write('<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" id="ResizingImage' + this.CANVAS_NAME + '" width="100%" height="100"></img>');
+        document.write('<div class="actition">Окончание акции:</div>');
         document.write('<canvas id="' + this.CANVAS_NAME + '"></canvas>');
         // document.write('</div>');
 

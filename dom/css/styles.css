@@ -221,6 +221,11 @@ input {
     font-family: 'Open Sans', sans-serif;
 }
 
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
 .seporator {
     text-align: center;
     padding: 4em 0px 0 0;
@@ -313,7 +318,7 @@ form {
 
 .header .phone .number {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.7em;
     margin-right: 1em;
     color: #585858;
 }
@@ -329,8 +334,9 @@ form {
 
 .header .button_red {
     text-align: center;
-    max-height: 30px;
+    max-height: 40px;
     margin: auto 0 auto auto;
+    padding: 10px 0;
 }
 
 
@@ -377,8 +383,7 @@ form {
     display: flex;
     flex-direction: column;
     z-index: 0;
-    max-width: 600px;
-    /*    min-width: ;*/
+    max-width: 560px;
 }
 
 .mainoffer h1 {
@@ -422,12 +427,14 @@ form {
     display: -webkit-flex;
     align-items: center;
     -webkit-align-items: center;
-    -webkit-flex: 1 1 250px;
+    /* -webkit-flex: 1 1 250px; */
+    /* flex: 1 1 250px; */
     min-width: 25%;
-    max-width: 90%;
+    max-width: 330px;
     margin: 30px auto;
     flex-flow: column wrap;
     -webkit-flex-flow: column wrap;
+    padding: 0 10px;
 }
 
 .aboutit .list img {
@@ -710,7 +717,7 @@ form {
 .order-section .countdown {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
-    margin-top: 40px;
+    padding: 0 20px;
 }
 
 .order-section .countdown canvas {
@@ -721,16 +728,20 @@ form {
 }
 
 .order-section .countdown .actition {
-    color: #FFF;
+    color: #fff236;
+    width: 100%;
+    max-width: 470px;
+    margin: auto;
 }
 
 .order-section .right {
-    -webkit-flex: 0 0 350px;
-    flex: 0 0 350px;
+    -webkit-flex: 0 0 430px;
+    flex: 0 0 430px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     margin: auto;
+    max-width: 100%;
 }
 
 .order-section h2 {
@@ -778,7 +789,7 @@ form {
 }
 
 .order-section form button.demo {
-    min-height: 100px;
+    min-height: 80px;
     max-width: 100%;
     margin: 1em 0 !important;
     border-radius: 3em;
@@ -799,7 +810,7 @@ form {
     flex: 1 0 auto;
     -webkit-flex: 1 0 auto;
     font-size: 130%;
-    line-height: 110%;
+    line-height: 90%;
 }
 
 .order-section form button .price > div {
@@ -809,6 +820,11 @@ form {
 .order-section form button strike {
     font-style: italic;
     font-size: 70%
+}
+
+.order_result {
+    color: #fff236;
+    text-align: center;
 }
 
 
@@ -961,7 +977,6 @@ footer .button > div {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .modal_hidden {
@@ -1021,7 +1036,13 @@ footer .button > div {
 
 /* media q*/
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 960px) {
+    img#ResizingImageCountDownCanvas {
+        max-height: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
     .aboutit .list {
         flex-flow: row wrap;
         -webkit-flex-flow: row wrap;
@@ -1079,7 +1100,10 @@ footer .button > div {
     .whatinside .container .glide {
         min-height: 350px;
     }
-
+    .order-section .countdown canvas {
+        max-width: 70vw;
+        margin: auto 0;
+    }
 }
 
 

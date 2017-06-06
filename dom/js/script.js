@@ -25,7 +25,7 @@ $(document).ready(function() {
                 $(".modal_send").removeClass('modal_button_hidden');
             },
             ERROR: function() {
-                $(".modal_result").text("Не корректный ввод").css("color", "red")
+                $(".modal_result").text("Ошибочный ввод").css("color", "red")
             },
             VALIDATE_EMAIL: function(email) {
                 var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -115,7 +115,7 @@ $(document).ready(function() {
                 });
             } else {
                 FORMS.ERROR();
-                $(".order_result").text("Пожалуйста, введите номер телефона.").css("color", "white");
+                $(".order_result").text("Пожалуйста, введите номер телефона.");
             }
             return false;
         });
