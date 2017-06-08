@@ -1,6 +1,6 @@
 <?php     
-	$mail_naurasha = 'info@naurasha.ru';
-	$mail_admin = 'antongolova@gmail.com';
+	$mail_naurasha = 'manager@naurasha.ru';
+	$mail_admin = 'scoutrul@gmail.com';
 
 	$order_email = $_POST['order_email'];                 
 	$order_name = $_POST['order_name'];          

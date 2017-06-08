@@ -167,9 +167,7 @@ section {
     -webkit-align-content: center;
 }
 
-.mainoffer .button.demo >.price {
-    word-break: break-all;
-}
+
 
 .button > div {
     margin: auto;
@@ -337,6 +335,7 @@ form {
     max-height: 40px;
     margin: auto 0 auto auto;
     padding: 10px 0;
+    letter-spacing: 0.03em;
 }
 
 
@@ -402,6 +401,13 @@ form {
     margin: 1em 0;
     font-size: 130%;
 }
+
+.mainoffer .button>.price {
+    flex: 1 0 25px;
+    max-width: 35px;
+}
+
+
 
 
 /*
@@ -977,6 +983,8 @@ footer .button > div {
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
 }
 
 .modal_hidden {
@@ -992,6 +1000,7 @@ footer .button > div {
     position: absolute;
     right: 30px;
     top: 20px;
+    z-index: 1000;
 }
 
 .modal_close:hover {
@@ -1006,6 +1015,7 @@ footer .button > div {
     background-color: #FFF;
     border-radius: 2px;
     position: relative;
+        margin: 1em;
 }
 
 .modal_container input,
@@ -1021,6 +1031,7 @@ footer .button > div {
 .modal_container form button {
     color: #FFF;
     margin: auto;
+    padding: 14px;
 }
 
 .modal_send {
@@ -1031,6 +1042,15 @@ footer .button > div {
 .modal_button_hidden {
     opacity: 0;
     padding: 5px;
+}
+
+#demovideo {
+    width: 100%;
+    max-width: 640px;
+    height: 320px;
+    margin: auto;
+    display: flex;
+    display: -webkit-flex;
 }
 
 
@@ -1103,6 +1123,11 @@ footer .button > div {
     .order-section .countdown canvas {
         max-width: 70vw;
         margin: auto 0;
+    }
+    #demovideo {
+        width: 100%;
+        max-width: 320px;
+        height: 160px;
     }
 }
 

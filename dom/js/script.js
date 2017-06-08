@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+        // SCROLL TO BOTTOM
          $("#header-order-button, #mainoffer-order-button").on('click', function() {
             $('body').animate({
                 scrollTop: $("#order_anchor").offset().top
@@ -9,7 +9,8 @@ $(document).ready(function() {
 
         // BUTTON DEMO SHOW/CLOSE MODAL WINDOW
         $('#mainoffer-demo-button, #modal_demo_close').on('click', function() {
-            FORMS.modal_demo_toggle()
+            FORMS.modal_demo_toggle();
+            $('#demovideo')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');  
         });
         // BUTTON FEED SHOW/CLOSE MODAL WINDOW
         $('#modal_feed_open, #modal_feed_close').on('click', function() {
@@ -35,39 +36,37 @@ $(document).ready(function() {
                 event.preventDefault()
                 $('#modal_feed').toggleClass('modal_visible').toggleClass('modal_hidden');
                 this.RESET();
-
             },
             modal_demo_toggle: function() {
-
                 $('#modal_demo').toggleClass('modal_visible').toggleClass('modal_hidden');
                 this.RESET();
             }
         }
 
-        $("#modal_demo_send").click(function() {
 
-            $(".modal_result").text("")
-            var demo_email = $("#modal_demo_email").val();
-            var demo_name = $("#modal_demo_name").val();
-            if (FORMS.VALIDATE_EMAIL(demo_email) && demo_name !== '') {
-                var demo_data = 'demo_email=' + demo_email + '&demo_name=' + demo_name;
-                $(".modal_send").addClass('modal_button_hidden');
-                $(".modal_result_demo").text("Спасибо! Ссылка выслана на Ваш E-mail!").css("color", "green");
+//FORM's SENDING
+        // $("#modal_demo_send").click(function() {
+        //     $(".modal_result").text("")
+        //     var demo_email = $("#modal_demo_email").val();
+        //     var demo_name = $("#modal_demo_name").val();
+        //     if (FORMS.VALIDATE_EMAIL(demo_email) && demo_name !== '') {
+        //         var demo_data = 'demo_email=' + demo_email + '&demo_name=' + demo_name;
+        //         $(".modal_send").addClass('modal_button_hidden');
+        //         $(".modal_result_demo").text("Спасибо! Ссылка выслана на Ваш E-mail!").css("color", "green");
 
-                $.ajax({
-                    type: "POST",
-                    url: "mail_demo.php",
-                    data: demo_data,
-                    success: function() {
-                        console.log('Success!');
-                    }
-                });
-
-            } else {
-                FORMS.ERROR();
-            }
-            return false;
-        });
+        //         $.ajax({
+        //             type: "POST",
+        //             url: "mail_demo.php",
+        //             data: demo_data,
+        //             success: function() {
+        //                 console.log('Success!');
+        //             }
+        //         });
+        //     } else {
+        //         FORMS.ERROR();
+        //     }
+        //     return false;
+        // });
 
         $("#modal_feed_send").click(function() {
             $(".modal_result").text("")
@@ -94,7 +93,6 @@ $(document).ready(function() {
         });
 
         $("#modal_order_send").click(function() {
-
             $(".order_result").text("")
             var order_email = $("#order_email").val();
             var order_name = $("#order_name").val();

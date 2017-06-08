@@ -1,5 +1,5 @@
 <?php     
-	$mail_admin = 'info@naurasha.ru';
+	$mail_admin = 'manager@naurasha.ru';
 	$feed_email = $_POST['feed_email'];                 
 	$feed_name = $_POST['feed_name'];          
 	$feed_message = $_POST['feed_message'];   

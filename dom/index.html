@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0">
-    <title>Наураша в стране Наурандии</title>
+    <title>Наураша в стране Наурандии - домашняя цифровая лаборатория для детей</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/script.js" type="text/javascript"></script>
@@ -41,17 +41,17 @@
                 </h1>
                     <div class="buttons">
                         <button class="button order" id="mainoffer-order-button" style="margin-right: 5px">
-                            <div class="title">Купить
-                                <br>лабораторию</div>
+                            <div class="title">купить лабораторию
+                                </div>
                             <div class="price">
-                                <div>5,990 руб.</div>
+                                <img src="images/icons/cart.png" alt="">
                             </div>
                         </button>
                         <button class="button demo" id="mainoffer-demo-button">
                             <div class="title">Демо
-                                <br>ролик</div>
+                                ролик</div>
                             <div class="price">
-                                <div>бесплатно</div>
+                                <div><img src="images/icons/play.png" alt=""></div>
                             </div>
                         </button>
                     </div>
@@ -352,7 +352,7 @@
                         countDown1.SET_YOUR_SEC = 0;
                         countDown1.SET_YOUR_MIN = 0;
                         countDown1.SET_YOUR_HOUR = 0;
-                        countDown1.SET_YOUR_DAY = 07;
+                        countDown1.SET_YOUR_DAY = 15;
                         countDown1.SET_YOUR_MONTH = 06;
                         countDown1.SET_YOUR_YEAR = 2017;
                         countDown1.NUM_OF_ELEMENTS = 7;
@@ -427,21 +427,16 @@
             </ul>
         </div>
     </footer>
+
+    <!--  -->
     <div id="modal_demo" class="modal_container modal_hidden">
-        <form name="demo">
+        <iframe id="demovideo" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/H0CduV9hsiM?enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen="true" allowscriptaccess="always"></iframe>
+
             <div id="modal_demo_close" class="modal_close">+</div>
-            <h1>Хотите познакомиться с Наурашей?</h1>
-            <p>Заполните форму и получите ссылку на демо-ролик программы</p>
-            <input type="text" placeholder="Ваше имя" id="modal_demo_name" autofocus>
-            <input type="text" placeholder="Ваш E-mail" id="modal_demo_email" required>
-            <div class="modal_result modal_result_demo"></div>
-            <div class="buttons">
-                <button class="button demo modal_send" id="modal_demo_send">
-                    <div>Получить ссылку</div>
-                </button>
-            </div>
-        </form>
+
     </div>
+    <!--  -->
+
     <div id="modal_feed" class="modal_container modal_hidden">
         <form name="modal_feed">
             <div id="modal_feed_close" class="modal_close">+</div>
