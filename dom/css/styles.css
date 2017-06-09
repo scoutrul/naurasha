@@ -90,6 +90,7 @@ section {
 .button_red {
     padding: 3px 8px;
     background: -webkit-linear-gradient(top, rgb(237, 12, 12) 0%, rgb(224, 68, 32) 100%);
+    background: -moz-linear-gradient(top, rgb(237, 12, 12) 0%, rgb(224, 68, 32) 100%);
     color: #FFF;
     border-radius: 20px;
     font-size: 13px;
@@ -140,6 +141,7 @@ section {
     -webkit-justify-content: center;
     flex: 1 0 auto;
     -webkit-flex: 1 0 auto;
+
 }
 
 .button>.price {
@@ -177,40 +179,44 @@ section {
     min-width: 250px;
     max-width: 350px;
     background: -webkit-linear-gradient(top, #33deff 0%, #01afd2 100%);
+    background: -moz-linear-gradient(top, #33deff 0%, #01afd2 100%);
 }
 
 .button.order:hover {
     background: -webkit-linear-gradient(top, rgb(45, 216, 250) 0%, rgb(25, 198, 232) 100%);
+    background: -moz-linear-gradient(top, rgb(45, 216, 250) 0%, rgb(25, 198, 232) 100%);
 }
 
 .button.demo {
     width: 100%;
     max-width: 270px;
     background: -webkit-linear-gradient(top, rgb(237, 12, 12) 0%, rgb(224, 68, 32) 100%);
+    background: -moz-linear-gradient(top, rgb(237, 12, 12) 0%, rgb(224, 68, 32) 100%);
 }
 
 .button.demo:hover {
     background: -webkit-linear-gradient(top, rgb(251, 0, 0) 0%, rgb(245, 113, 82) 100%);
+    background: -moz-linear-gradient(top, rgb(251, 0, 0) 0%, rgb(245, 113, 82) 100%);
 }
 
 button {
     border: 0;
 }
 
-button:focus,
-button:active {
+.button:focus,
+.button:active {
     outline: none;
     border: none;
 }
 
-button:active {
+.button:active {
     box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.7) !important;
     top: 1px;
     left: 1px;
     position: relative;
 }
 
-button:hover {
+.button:hover {
     cursor: pointer;
 }
 
@@ -674,7 +680,9 @@ form {
 
 .photogallery {}
 
-.photogallery .container {}
+.photogallery .container {
+    display: block;
+}
 
 
 /*
@@ -794,7 +802,7 @@ form {
     width: 100%;
 }
 
-.order-section form button.demo {
+.order-section form .button.demo {
     min-height: 80px;
     max-width: 100%;
     margin: 1em 0 !important;
@@ -806,24 +814,24 @@ form {
     background: -webkit-linear-gradient(top, rgb(237, 12, 12) 0%, rgb(232, 80, 45) 100%);
 }
 
-.order-section form button .title {
+.order-section form .button .title {
     flex: 1 0 auto;
     -webkit-flex: 1 0 auto;
     line-height: 50px;
 }
 
-.order-section form button .price {
+.order-section form .button .price {
     flex: 1 0 auto;
     -webkit-flex: 1 0 auto;
     font-size: 130%;
     line-height: 90%;
 }
 
-.order-section form button .price > div {
+.order-section form .button .price > div {
     width: 100%;
 }
 
-.order-section form button strike {
+.order-section form .button strike {
     font-style: italic;
     font-size: 70%
 }
@@ -871,6 +879,7 @@ footer .left {
 
 footer .list {
     font-size: 14px;
+    display: flex;
     display: -webkit-flex;
     list-style: none;
     padding: 0;
@@ -1024,7 +1033,7 @@ footer .button > div {
     padding: 10px;
     border: 0;
     border-radius: 3px;
-    background-color: rgb(241, 241, 241)
+    background-color: rgb(241, 241, 241);
     width: 100%;
 }
 

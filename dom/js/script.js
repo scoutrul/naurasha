@@ -2,7 +2,7 @@ $(document).ready(function() {
 
         // SCROLL TO BOTTOM
          $("#header-order-button, #mainoffer-order-button").on('click', function() {
-            $('body').animate({
+            $('html,body').animate({
                 scrollTop: $("#order_anchor").offset().top
             }, 1400);
         });
@@ -33,7 +33,6 @@ $(document).ready(function() {
                 return re.test(email);
             },
             modal_feed_toggle: function() {
-                event.preventDefault()
                 $('#modal_feed').toggleClass('modal_visible').toggleClass('modal_hidden');
                 this.RESET();
             },
@@ -101,7 +100,7 @@ $(document).ready(function() {
             if (FORMS.VALIDATE_EMAIL(order_email)) {
                 var phone = (order_phone !== '') ? '&order_phone=' + order_phone : '';
                 var order_data = 'order_email=' + order_email + '&order_name=' + order_name + '&order_message=' + order_message + phone;
-                $(".order_result").text("Спасибо за заказ! В ближайшее время (в будни с 10 до 18) наш менеджер свяжется с Вами.").css("color", "#fff236");
+                $(".order_result").text("Спасибо за заказ! В ближайшее время (в будни с 10 до 18) наш менеджер свяжется с Вами.");
                 $("#modal_order_send").hide();
                 $.ajax({
                     type: "POST",
@@ -113,7 +112,7 @@ $(document).ready(function() {
                 });
             } else {
                 FORMS.ERROR();
-                $(".order_result").text("Пожалуйста, введите номер телефона.");
+                $(".order_result").text("Пожалуйста, введите Ваше имя, e-mail и номер телефона.");
             }
             return false;
         });

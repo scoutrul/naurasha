@@ -1,6 +1,6 @@
 <?php     
-	$mail_naurasha = 'manager@naurasha.ru';
-	$mail_admin = 'scoutrul@gmail.com';
+	$mail_naurasha = 'order@naurasha.ru';
+	$mail_admin = 'scoutrul@mail.ru';
 
 	$order_email = $_POST['order_email'];                 
 	$order_name = $_POST['order_name'];          
@@ -14,6 +14,7 @@
 	$body_message = 'DOM.NAURASHA.RU ЗАКАЗ'. "\r\n";   
  	$body_message .= 'Имя: ' . $order_name . "\r\n";      
  	$body_message .= 'Сообщение: ' . $order_message. "\r\n";   
+ 	$body_message .= 'E-mail: ' . $order_email. "\r\n";   
  	$body_message .= 'Телефон: ' . $order_phone;  
  	$headers .= 'From: '.$mail_naurasha.' <'.$mail_naurasha.'>' . "\r\n" .
  	 'Reply-To: <'.$order_email.'>' . "\r\n" .
